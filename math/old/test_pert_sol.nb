@@ -1,0 +1,922 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     29036,        760]*)
+(*NotebookOutlinePosition[     29987,        790]*)
+(*  CellTagsIndexPosition[     29943,        786]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    RowBox[{"\n", 
+      RowBox[{
+        StyleBox["\[Omega]1",
+          FontSize->16], "=", "  ", \(\[Pi]\ \[ImaginaryI]\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[ImaginaryI]\ \[Pi]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\[Tau] = \ 5\ \[ImaginaryI]\)], "Input"],
+
+Cell[BoxData[
+    \(5\ \[ImaginaryI]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[Omega]2 = \ \[Omega]1\ \[Tau]\)\(\n\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-5\)\ \[Pi]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(gg\  = \ 
+      WeierstrassInvariants\ [\ {\[Omega]1, \ \[Omega]2}\ ]\)], "Input"],
+
+Cell[BoxData[
+    \(WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-5\)\ \[Pi]}]\)], \
+"Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(WeierstrassInvariants[{\[Omega]1, \[Omega]2}]\), "\[IndentingNewLine]", \
+
+    \(gg\  // \ N\)}], "Input"],
+
+Cell[BoxData[
+    \(WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-5\)\ \[Pi]}]\)], \
+"Output"],
+
+Cell[BoxData[
+    \({\(\(0.08333333333378756`\)\(\[InvisibleSpace]\)\) + 
+        0.`\ \[ImaginaryI], \(-0.004629629629576638`\) + 
+        0.`\ \[ImaginaryI]}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(gg2\  = \ 
+      WeierstrassInvariants[\ {\[Omega]1, \ 
+          2  \[Omega]2\ }\ ]\ \), "\[IndentingNewLine]", 
+    \(N\ [gg2\ , \ 30]\)}], "Input"],
+
+Cell[BoxData[
+    \(WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-10\)\ \[Pi]}]\)], \
+"Output"],
+
+Cell[BoxData[
+    \({0.083333333333333333333333343649133458419014034171`30. , \
+\(-0.004629629629629629629629628426119615036300214532`30. \)}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(WF[x_] := WeierstrassP[x, gg]\)], "Input"],
+
+Cell[BoxData[
+    \(WF2[x_]\  := \ WeierstrassP[x, \ gg2]\)], "Input"],
+
+Cell[BoxData[
+    \(WW1[x1_, x2_] := 
+      WF[x1 + x2] + WF[x1 - x2]\  + \[IndentingNewLine]\t
+        1\/2\ \((\ 
+            WF[x1\ ]\  + \ WF[x1\  + \ \[Omega]1]\  + \ WF\ [x2]\  + \ 
+              WF[x2\  + \ \[Omega]1]\  - \ 2\ WF[\[Omega]1]\ )\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(q\  = \ \[ExponentialE]\^\(2\ \[Pi]\ \
+\[ImaginaryI]\ \[Tau]\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[ExponentialE]\^\(\(-10\)\ \[Pi]\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(A[X1_, \ X2_]\  := \ 
+      1\/2\ \  + \ \(q\^\(1\/3\)\) \((\ \[ExponentialE]\^\(X1\  - \ X2\)\  + \
+\ \[ExponentialE]\^\(-\((X1\  + \ X2)\)\)\  + \ 
+              2\ \[ExponentialE]\^\(2\ X2\)\ )\)\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(k = 1\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(val\  = \ {\ 0.5, 
+        0.6, 0.7, 0.8, \ 0.9, \ 1, 1.2, \ 1.5, \ 2, 3, 4, 5}\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({0.5`, 0.6`, 0.7`, 0.8`, 0.9`, 1, 1.2`, 1.5`, 2, 3, 4, 5}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+    \(\(WWval\  = \ 
+        Table[{Null, Null, Null}, \ \ {n, \ 
+            1, \ \(Dimensions[
+                val]\)[\([1]\)]\ }\ ];\)\), "\[IndentingNewLine]", 
+    \(\(WWval2\  = \ 
+        Table[{Null, Null, Null}, \ \ {n, \ 
+            1, \ \(Dimensions[
+                val]\)[\([1]\)]\ }\ ];\)\), "\[IndentingNewLine]", 
+    \(\(WWval3\  = \ 
+        Table[{Null, Null, Null}, \ \ {n, \ 
+            1, \ \(Dimensions[
+                val]\)[\([1]\)]\ }\ ];\)\), "\[IndentingNewLine]", 
+    \(\(WWval4\  = \ 
+        Table[{Null, Null, Null}, \ \ {n, \ 
+            1, \ \(Dimensions[
+                val]\)[\([1]\)]\ }\ ];\)\), "\[IndentingNewLine]", 
+    \(\(WWval5\  = \ 
+        Table[{Null, Null, Null}, \ \ {n, \ 
+            1, \ \(Dimensions[val]\)[\([1]\)]\ }\ ];\)\)}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(For\ [\ i\  = \ 1, \ 
+      i \[LessEqual] \ \(Dimensions[
+            val]\)[\([1]\)], \ \(i++\), \ \n\t\[Tau]\  = \ \[ImaginaryI]\ \
+val[\([i]\)]; \[IndentingNewLine]\t
+      q\  = \ \[ExponentialE]\^\(2\ \[Pi]\ \[ImaginaryI]\ \[Tau]\); \
+\[IndentingNewLine]\t
+      WW\  = \ 1\/2\  + \ 
+          3\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(1\/3\)\ \ \ ; \n\t
+      Print[\ "\<\[Tau] = \>", \ \[Tau], "\<,  WW = \>", 
+        StringJoin[ToString[Re[N[WW, 20]]], "\< \>", 
+          ToString[Im[N[WW, 20]]]]]; \[IndentingNewLine]\t
+      WWval[\([i, 1]\)]\  = \ Re[N[WW, 20]]; \[IndentingNewLine]\t
+      WWval[\([i, 2]\)]\  = \ Im[N[WW, 20]]; \[IndentingNewLine]\t
+      WWval[\([i, 3]\)]\  = \ Abs[\[Tau]]; \n\t
+      WW2\  = \ 1\/2\  + \ 
+          3\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(1\/3\) + \ 
+          12\ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(\(-\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(2\/3\); \[IndentingNewLine]\t
+      WWval2[\([i, 1]\)]\  = \ Re[N[WW2, 20]]; \n\t
+      WWval2[\([i, 2]\)]\  = \ Im[N[WW2, 20]]; \n\t
+      WWval2[\([i, 3]\)]\  = \ Abs[\[Tau]]; \n\t
+      Print[\ "\<\[Tau] = \>", \ \[Tau], "\<,  WW2 = \>", 
+        StringJoin[ToString[Re[N[WW2, 20]]], "\< \>", 
+          ToString[Im[N[WW2, 20]]]]]; \n\t
+      WW3\  = \ 1\/2\  + \ 
+          3\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(1\/3\) + \ 
+          12\ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(\(-\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(2\/3\)\  + \ 12\ q\ \ ; \n\t
+      Print[\ "\<\[Tau] = \>", \ \[Tau], "\<,  WW3 = \>", 
+        StringJoin[ToString[Re[N[WW3, 20]]], "\< \>", 
+          ToString[Im[N[WW3, 20]]]]]; \[IndentingNewLine]\t
+      WWval3[\([i, 1]\)]\  = \ Re[N[WW3, 20]]; \n\t
+      WWval3[\([i, 2]\)]\  = \ Im[N[WW3, 20]]; \n\t
+      WWval3[\([i, 3]\)]\  = \ Abs[\[Tau]]; \n\t
+      WW4\  = \ 1\/2\  + \ 
+          3\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(1\/3\) + \ 
+          12\ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(\(-\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(2\/3\)\  + \ 12\ q\ \ \  + \ 
+          16\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(4\/3\); \n\t
+      Print[\ "\<\[Tau] = \>", \ \[Tau], "\<,  WW4 = \>", 
+        StringJoin[ToString[Re[N[WW4, 20]]], "\< \>", 
+          ToString[Im[N[WW4, 20]]]]]; \[IndentingNewLine]\t
+      WWval4[\([i, 1]\)]\  = \ Re[N[WW4, 20]]; \n\t
+      WWval4[\([i, 2]\)]\  = \ Im[N[WW4, 20]]; \n\t
+      WWval4[\([i, 3]\)]\  = \ 
+        Abs[\[Tau]]; \[IndentingNewLine]\[IndentingNewLine]\t
+      WW5\  = \ 1\/2\  + \ 
+          3\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(1\/3\) + \ 
+          12\ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(\(-\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(2\/3\)\  + \ 12\ q\ \ \  + \ 
+          16\ \@2\%3\ \[ExponentialE]\^\(\(\(\(+\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ q\^\(4\/3\)\  + \ 
+          32\ \@\(1\/2\)\%3\ \[ExponentialE]\^\(\(\(-\ 2\) \[Pi]\ \
+\[ImaginaryI]\)\/3\ k\)\ q\^\(5\/3\); \n\t
+      Print[\ "\<\[Tau] = \>", \ \[Tau], "\<,  WW5 = \>", 
+        StringJoin[ToString[Re[N[WW5, 20]]], "\< \>", 
+          ToString[Im[N[WW5, 20]]]]]; \[IndentingNewLine]\t
+      WWval5[\([i, 1]\)]\  = \ Re[N[WW5, 20]]; \n\t
+      WWval5[\([i, 2]\)]\  = \ Im[N[WW5, 20]]; \n\t
+      WWval5[\([i, 3]\)]\  = \ Abs[\[Tau]];\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"-0.163197 1.14869"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], ",  WW = ", "-0.163197 1.14869"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"-0.749637 0.132947"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], ",  WW2 = ", "-0.749637 0.132947"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"-0.23107 0.132947"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], ",  WW3 = ", "-0.23107 0.132947"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"-0.38392 0.39769"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], ",  WW4 = ", "-0.38392 0.39769"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"-0.451499 0.280639"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], ",  WW5 = ", "-0.451499 0.280639"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.6`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"-0.0378783 0.931633"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.59999999999999998], ",  WW = ", "-0.0378783 0.931633"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.6`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"-0.423629 0.263493"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.59999999999999998], ",  WW2 = ", "-0.423629 0.263493"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.6`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"-0.14698 0.263493"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.59999999999999998], ",  WW3 = ", "-0.14698 0.263493"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.6`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"-0.213115 0.378042"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.59999999999999998], ",  WW4 = ", "-0.213115 0.378042"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.6`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"-0.23683 0.336966"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.59999999999999998], ",  WW5 = ", "-0.23683 0.336966"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.0637599 0.75559"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], ",  WW = ", "0.0637599 0.75559"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"-0.189981 0.316098"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], ",  WW2 = ", "-0.189981 0.316098"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"-0.0423916 0.316098"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], ",  WW3 = ", "-0.0423916 0.316098"],
+      
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"-0.0710069 0.365662"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], ",  WW4 = ", "-0.0710069 0.365662"],
+      
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"-0.079329 0.351247"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], ",  WW5 = ", "-0.079329 0.351247"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.8`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.146192 0.612813"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.80000000000000004], ",  WW = ", "0.146192 0.612813"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.8`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"-0.0207141 0.323722"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.80000000000000004], ",  WW2 = ", "-0.0207141 0.323722"],
+      
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.8`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.0580229 0.323722"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.80000000000000004], ",  WW3 = ", "0.0580229 0.323722"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.8`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.0456417 0.345167"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.80000000000000004], ",  WW4 = ", "0.0456417 0.345167"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.8`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.0427213 0.340109"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.80000000000000004], ",  WW5 = ", "0.0427213 0.340109"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.9`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.213048 0.497015"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.90000000000000002], ",  WW = ", "0.213048 0.497015"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.9`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.10326 0.306856"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.90000000000000002], ",  WW2 = ", "0.10326 0.306856"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.9`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.145265 0.306856"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.90000000000000002], ",  WW3 = ", "0.145265 0.306856"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.9`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.139908 0.316135"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.90000000000000002], ",  WW4 = ", "0.139908 0.316135"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.9`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.138883 0.31436"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.90000000000000002], ",  WW5 = ", "0.138883 0.31436"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.26727107950927557856 \
+0.40309831468059226858"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], ",  WW = ", 
+        "0.26727107950927557856 0.40309831468059226858"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.19505407893223833925 \
+0.27801480051093284074"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], ",  WW2 = ", 
+        "0.19505407893223833925 0.27801480051093284074"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.21746339171273420503 \
+0.27801480051093284074"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], ",  WW3 = ", 
+        "0.21746339171273420503 0.27801480051093284074"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.21514548274724807305 \
+0.28202953660647423656"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], ",  WW4 = ", 
+        "0.21514548274724807305 0.28202953660647423656"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.21478585311302583351 \
+0.28140663980809390662"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], ",  WW5 = ", 
+        "0.21478585311302583351 0.28140663980809390662"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.346915 0.265152"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], ",  WW = ", "0.346915 0.265152"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.315668 0.21103"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], ",  WW2 = ", "0.315668 0.21103"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.322046 0.21103"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], ",  WW3 = ", "0.322046 0.21103"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.321612 0.211782"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], ",  WW4 = ", "0.321612 0.211782"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.321568 0.211705"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], ",  WW5 = ", "0.321568 0.211705"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.418331 0.141455"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], ",  WW = ", "0.418331 0.141455"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.409438 0.126052"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], ",  WW2 = ", "0.409438 0.126052"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.410406 0.126052"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], ",  WW3 = ", "0.410406 0.126052"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.410371 0.126113"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], ",  WW4 = ", "0.410371 0.126113"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.410369 0.126109"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], ",  WW5 = ", "0.410369 0.126109"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.47134066432850575446 \
+0.04963942549419914020"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], ",  WW = ", 
+        "0.47134066432850575446 0.04963942549419914020"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.47024552096699724443 \
+0.04774258155049463048"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], ",  WW2 = ", 
+        "0.47024552096699724443 0.04774258155049463048"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.47028736907527175238 \
+0.04774258155049463048"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], ",  WW3 = ", 
+        "0.47028736907527175238 0.04774258155049463048"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.47028683603572408298 \
+0.04774350480207363742"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], ",  WW4 = ", 
+        "0.47028683603572408298 0.04774350480207363742"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.47028682585135120108 \
+0.04774348716222236276"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], ",  WW5 = ", 
+        "0.47028682585135120108 0.04774348716222236276"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.49647075438927188118 \
+0.00611283271017055376"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], ",  WW = ", 
+        "0.49647075438927188118 0.00611283271017055376"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.49645414695649742292 \
+0.00608406779282190749"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], ",  WW2 = ", 
+        "0.49645414695649742292 0.00608406779282190749"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.49645422510544305588 \
+0.00608406779282190749"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], ",  WW3 = ", 
+        "0.49645422510544305588 0.00608406779282190749"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.49645422498286224550 \
+0.00608406800513809911"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], ",  WW4 = ", 
+        "0.49645422498286224550 0.00608406800513809911"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.49645422498257383364 \
+0.00608406800463855512"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], ",  WW5 = ", 
+        "0.49645422498257383364 0.00608406800463855512"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.49956539206897135025 \
+0.00075276301791401172"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], ",  WW = ", 
+        "0.49956539206897135025 0.00075276301791401172"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.49956514022356639958 \
+0.00075232680887698440"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], ",  WW2 = ", 
+        "0.49956514022356639958 0.00075232680887698440"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.49956514036950508010 \
+0.00075232680887698440"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], ",  WW3 = ", 
+        "0.49956514036950508010 0.00075232680887698440"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.49956514036947689071 \
+0.00075232680892580984"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], ",  WW4 = ", 
+        "0.49956514036947689071 0.00075232680892580984"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.49956514036947688255 \
+0.00075232680892579569"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], ",  WW5 = ", 
+        "0.49956514036947688255 0.00075232680892579569"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW = "\[InvisibleSpace]"0.49994648033190468858 \
+0.00009269878434530243"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], ",  WW = ", 
+        "0.49994648033190468858 0.00009269878434530243"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW2 = "\[InvisibleSpace]"0.49994647651276485787 \
+0.00009269216940107443"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], ",  WW2 = ", 
+        "0.49994647651276485787 0.00009269216940107443"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW3 = "\[InvisibleSpace]"0.49994647651303739000 \
+0.00009269216940107443"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], ",  WW3 = ", 
+        "0.49994647651303739000 0.00009269216940107443"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW4 = "\[InvisibleSpace]"0.49994647651303738351 \
+0.00009269216940108565"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], ",  WW4 = ", 
+        "0.49994647651303738351 0.00009269216940108565"],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]",  WW5 = "\[InvisibleSpace]"0.49994647651303738351 \
+0.00009269216940108565"\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], ",  WW5 = ", 
+        "0.49994647651303738351 0.00009269216940108565"],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(Export[\ "\<test_pert_sol1.dat\>", \ 
+        WWval, "\<Table\>"];\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(Export[\ "\<test_pert_sol2.dat\>", \ 
+        WWval2, "\<Table\>"];\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(Export[\ "\<test_pert_sol3.dat\>", \ 
+        WWval3, "\<Table\>"];\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(Export[\ "\<test_pert_sol4.dat\>", \ 
+        WWval4, "\<Table\>"];\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(Export[\ "\<test_pert_sol5.dat\>", \ 
+        WWval5, "\<Table\>"];\)\)], "Input"]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{1269, 969},
+WindowMargins->{{-5, Automatic}, {Automatic, 0}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperSize"->{612, 792},
+"PaperOrientation"->"Portrait",
+"PostScriptOutputFile":>FrontEnd`FileName[{$RootDirectory, "hepuser", \
+"bolokhov", "mvacua", "math"}, "test_ansatz.nb.ps", CharacterEncoding -> \
+"iso8859-1"],
+"Magnification"->1},
+Magnification->1.25
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 153, 4, 54, "Input"],
+Cell[1932, 59, 54, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2023, 65, 60, 1, 34, "Input"],
+Cell[2086, 68, 50, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2173, 74, 83, 2, 54, "Input"],
+Cell[2259, 78, 47, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2343, 84, 102, 2, 34, "Input"],
+Cell[2448, 88, 96, 2, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2581, 95, 127, 3, 54, "Input"],
+Cell[2711, 100, 96, 2, 34, "Output"],
+Cell[2810, 104, 173, 3, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3020, 112, 171, 4, 54, "Input"],
+Cell[3194, 118, 97, 2, 34, "Output"],
+Cell[3294, 122, 155, 2, 34, "Output"]
+}, Open  ]],
+Cell[3464, 127, 62, 1, 34, "Input"],
+Cell[3529, 130, 70, 1, 34, "Input"],
+Cell[3602, 133, 265, 5, 80, "Input"],
+
+Cell[CellGroupData[{
+Cell[3892, 142, 126, 2, 55, "Input"],
+Cell[4021, 146, 69, 1, 35, "Output"]
+}, Open  ]],
+Cell[4105, 150, 285, 4, 100, "Input"],
+
+Cell[CellGroupData[{
+Cell[4415, 158, 69, 1, 54, "Input"],
+Cell[4487, 161, 35, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4559, 167, 166, 2, 74, "Input"],
+Cell[4728, 171, 91, 1, 34, "Output"]
+}, Open  ]],
+Cell[4834, 175, 813, 19, 114, "Input"],
+
+Cell[CellGroupData[{
+Cell[5672, 198, 3531, 66, 865, "Input"],
+Cell[9206, 266, 285, 5, 29, "Print"],
+Cell[9494, 273, 289, 5, 29, "Print"],
+Cell[9786, 280, 287, 5, 29, "Print"],
+Cell[10076, 287, 285, 5, 29, "Print"],
+Cell[10364, 294, 289, 5, 29, "Print"],
+Cell[10656, 301, 305, 5, 29, "Print"],
+Cell[10964, 308, 305, 5, 29, "Print"],
+Cell[11272, 315, 303, 5, 29, "Print"],
+Cell[11578, 322, 305, 5, 29, "Print"],
+Cell[11886, 329, 303, 5, 29, "Print"],
+Cell[12192, 336, 301, 5, 29, "Print"],
+Cell[12496, 343, 305, 5, 29, "Print"],
+Cell[12804, 350, 314, 6, 29, "Print"],
+Cell[13121, 358, 314, 6, 29, "Print"],
+Cell[13438, 366, 305, 5, 29, "Print"],
+Cell[13746, 373, 301, 5, 29, "Print"],
+Cell[14050, 380, 314, 6, 29, "Print"],
+Cell[14367, 388, 305, 5, 29, "Print"],
+Cell[14675, 395, 305, 5, 29, "Print"],
+Cell[14983, 402, 305, 5, 29, "Print"],
+Cell[15291, 409, 301, 5, 29, "Print"],
+Cell[15595, 416, 301, 5, 29, "Print"],
+Cell[15899, 423, 303, 5, 29, "Print"],
+Cell[16205, 430, 303, 5, 29, "Print"],
+Cell[16511, 437, 301, 5, 29, "Print"],
+Cell[16815, 444, 340, 7, 29, "Print"],
+Cell[17158, 453, 342, 7, 29, "Print"],
+Cell[17503, 462, 342, 7, 29, "Print"],
+Cell[17848, 471, 342, 7, 29, "Print"],
+Cell[18193, 480, 342, 7, 29, "Print"],
+Cell[18538, 489, 285, 5, 29, "Print"],
+Cell[18826, 496, 285, 5, 29, "Print"],
+Cell[19114, 503, 285, 5, 29, "Print"],
+Cell[19402, 510, 287, 5, 29, "Print"],
+Cell[19692, 517, 287, 5, 29, "Print"],
+Cell[19982, 524, 285, 5, 29, "Print"],
+Cell[20270, 531, 287, 5, 29, "Print"],
+Cell[20560, 538, 287, 5, 29, "Print"],
+Cell[20850, 545, 287, 5, 29, "Print"],
+Cell[21140, 552, 287, 5, 29, "Print"],
+Cell[21430, 559, 347, 7, 29, "Print"],
+Cell[21780, 568, 349, 7, 29, "Print"],
+Cell[22132, 577, 349, 7, 29, "Print"],
+Cell[22484, 586, 349, 7, 29, "Print"],
+Cell[22836, 595, 349, 7, 29, "Print"],
+Cell[23188, 604, 347, 7, 29, "Print"],
+Cell[23538, 613, 349, 7, 29, "Print"],
+Cell[23890, 622, 349, 7, 29, "Print"],
+Cell[24242, 631, 349, 7, 29, "Print"],
+Cell[24594, 640, 349, 7, 29, "Print"],
+Cell[24946, 649, 347, 7, 29, "Print"],
+Cell[25296, 658, 349, 7, 29, "Print"],
+Cell[25648, 667, 349, 7, 29, "Print"],
+Cell[26000, 676, 349, 7, 29, "Print"],
+Cell[26352, 685, 349, 7, 29, "Print"],
+Cell[26704, 694, 347, 7, 29, "Print"],
+Cell[27054, 703, 349, 7, 29, "Print"],
+Cell[27406, 712, 349, 7, 29, "Print"],
+Cell[27758, 721, 349, 7, 29, "Print"],
+Cell[28110, 730, 349, 7, 29, "Print"]
+}, Open  ]],
+Cell[28474, 740, 130, 2, 54, "Input"],
+Cell[28607, 744, 104, 2, 34, "Input"],
+Cell[28714, 748, 104, 2, 34, "Input"],
+Cell[28821, 752, 104, 2, 34, "Input"],
+Cell[28928, 756, 104, 2, 34, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

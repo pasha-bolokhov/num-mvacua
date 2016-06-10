@@ -1,0 +1,419 @@
+(************** Content-type: application/mathematica **************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     10229,        318]*)
+(*NotebookOutlinePosition[     10894,        341]*)
+(*  CellTagsIndexPosition[     10850,        337]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(N\_order\  = \ 11\)], "Input"],
+
+Cell[BoxData[
+    \(General::"spell1" \(\(:\)\(\ \)\) 
+      "Possible spelling error: new symbol name \"\!\(order\)\" is similar to \
+existing symbol \"\!\(Order\)\"."\)], "Message"],
+
+Cell[BoxData[
+    \(11\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(eX\ [q_]\  := \ 
+      a \((1\  + \[Sum]\+\(k = 1\)\%\(N\_order\)\ b\_k\ q\^k)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(eX[q]\)], "Input"],
+
+Cell[BoxData[
+    \(a\ \((1 + q\ b\_1 + q\^2\ b\_2 + q\^3\ b\_3 + q\^4\ b\_4 + q\^5\ b\_5 + 
+          q\^6\ b\_6 + q\^7\ b\_7 + q\^8\ b\_8 + q\^9\ b\_9 + q\^10\ b\_10 + 
+          q\^11\ b\_11)\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(emX[q_]\  := \ 
+      Series[\((eX[q])\)\^\(-1\), \ {q, 0, 
+          N\_order}]\)\(\[IndentingNewLine]\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(e2X[q_]\  := \ \((eX[q])\)\^2\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(em2X[
+        q_]\  := \ \((emX[q])\)\^2\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(General::"spell" \(\(:\)\(\ \)\) 
+      "Possible spelling error: new symbol name \"\!\(em2X\)\" is similar to \
+existing symbols \!\({e2X, emX}\)."\)], "Message"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(W\_der[
+        q_]\  := \ \ \[Sum]\+\(k = 1\)\%\(N\_order\)\((\ \(k\^2\) \((\ eX[q]\ \
+q\^2\ )\)\^k\ \  - \ \ \ \ k\^2\ \((\ emX[q]\ q)\)\^k\ \  + \ 
+              2\ k\^2\ \((\ e2X[q]\ q\ )\)\^k\ )\)\ \ \  + \
+\[IndentingNewLine]\t\[Sum]\+\(n = 1\)\%\(Ceiling[N\_order/3]\)\((\[Sum]\+\(k \
+= 1\)\%\(Ceiling[N\_order\/\(3\ n\)]\)\((\ \ \ \ \ k\^2\ \((\ eX[q]\ q\^\(3\ \
+n\  + \ 2\)\ )\)\^k\ \  - \ \ k\^2\ \((\ emX[q]\ q\^\(3\ n\  + \ 1\)\ )\)\^k\ \
+\  + \[IndentingNewLine]\t\t\ \ \ \ \ \ \ \ 2\ k\^2\ \((e2X[q]\ q\^\(6  n + 1\
+\))\)\^k\ \  - \ 
+                  2\ k\^2\ \((em2X[q]\ q\^\(6\ n\  - 1\))\)\^k\ \ \ \ )\)\ \
+)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(W\_curr[q_]\  := \ \ SeriesCoefficient[
+        Series[\ W\_der[q], \ {q, \ 0, \ 1}\ ], \ 1]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ W\_curr[q]\ *) \)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(sol\  = \ Solve[\ W\_curr[q]\  \[Equal] \ 0, \ a\ ]\)], "Input"],
+
+Cell[BoxData[
+    \({{a \[Rule] \(-\((\(-\(1\/2\)\))\)\^\(1/3\)\)}, {a \[Rule] 
+          1\/2\^\(1/3\)}, {a \[Rule] \((\(-1\))\)\^\(2/3\)\/2\^\(1/3\)}}\)], \
+"Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(y\  = \ \((a\  /. \ sol)\)\ [\([\)\(2\)\(]\)]\)], "Input"],
+
+Cell[BoxData[
+    \(1\/2\^\(1/3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a\  = \ y\)], "Input"],
+
+Cell[BoxData[
+    \(1\/2\^\(1/3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(For[\ l = 2, \ 
+      l\  \[LessEqual] \ 
+        N\_order, \ \(l++\), \[IndentingNewLine]W\_curr[q_]\  := \ 
+        SeriesCoefficient[Series[W\_der[q], {q, \ 0, \ l}], \ 
+          l]; \[IndentingNewLine]sol\  = \ 
+        Solve[\ W\_curr[q]\  \[Equal] \ 0, \ 
+          b\_\(l - 1\)\ ]; \[IndentingNewLine]y\  = \ \((b\_\(l - 1\)\  /. \ 
+            sol)\); \[IndentingNewLine]b\_\(l - 1\)\  = \ 
+        Simplify[y[\([1]\)]]; \[IndentingNewLine]Print["\<coef \>", 
+        l, "\< \>", \ 
+        b\_\(l - 1\)\ ];\[IndentingNewLine]]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]2\[InvisibleSpace]" "\
+\[InvisibleSpace]1\/2\^\(2/3\)\),
+      SequenceForm[ "coef ", 2, " ", 
+        Power[ 2, 
+          Rational[ -2, 3]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]3\[InvisibleSpace]" "\
+\[InvisibleSpace]\(-\(1\/2\^\(1/3\)\)\)\),
+      SequenceForm[ "coef ", 3, " ", 
+        Times[ -1, 
+          Power[ 2, 
+            Rational[ -1, 3]]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]4\[InvisibleSpace]" "\
+\[InvisibleSpace]11\/12\),
+      SequenceForm[ "coef ", 4, " ", 
+        Rational[ 11, 12]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]5\[InvisibleSpace]" "\
+\[InvisibleSpace]\(-\(5\/\(2\ 2\^\(2/3\)\)\)\)\),
+      SequenceForm[ "coef ", 5, " ", 
+        Times[ 
+          Rational[ -5, 2], 
+          Power[ 2, 
+            Rational[ -2, 3]]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]6\[InvisibleSpace]" "\
+\[InvisibleSpace]53\/\(12\ 2\^\(1/3\)\)\),
+      SequenceForm[ "coef ", 6, " ", 
+        Times[ 
+          Rational[ 53, 12], 
+          Power[ 2, 
+            Rational[ -1, 3]]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]7\[InvisibleSpace]" "\
+\[InvisibleSpace]\(-\(265\/36\)\)\),
+      SequenceForm[ "coef ", 7, " ", 
+        Rational[ -265, 36]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]8\[InvisibleSpace]" "\
+\[InvisibleSpace]405\/\(16\ 2\^\(2/3\)\)\),
+      SequenceForm[ "coef ", 8, " ", 
+        Times[ 
+          Rational[ 405, 16], 
+          Power[ 2, 
+            Rational[ -2, 3]]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]9\[InvisibleSpace]" "\
+\[InvisibleSpace]\(-\(6701\/\(144\ 2\^\(1/3\)\)\)\)\),
+      SequenceForm[ "coef ", 9, " ", 
+        Times[ 
+          Rational[ -6701, 144], 
+          Power[ 2, 
+            Rational[ -1, 3]]]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]10\[InvisibleSpace]" "\
+\[InvisibleSpace]227081\/2592\),
+      SequenceForm[ "coef ", 10, " ", 
+        Rational[ 227081, 2592]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("coef "\[InvisibleSpace]11\[InvisibleSpace]" "\
+\[InvisibleSpace]\(-\(5359\/\(16\ 2\^\(2/3\)\)\)\)\),
+      SequenceForm[ "coef ", 11, " ", 
+        Times[ 
+          Rational[ -5359, 16], 
+          Power[ 2, 
+            Rational[ -2, 3]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    RowBox[{"eX", "[", "q", 
+      StyleBox["]",
+        FontSize->14]}]], "Input"],
+
+Cell[BoxData[
+    \(\(1 + q\/2\^\(2/3\) - q\^2\/2\^\(1/3\) + \(11\ q\^3\)\/12 - \(5\ q\^4\)\
+\/\(2\ 2\^\(2/3\)\) + \(53\ q\^5\)\/\(12\ 2\^\(1/3\)\) - \(265\ q\^6\)\/36 + \
+\(405\ q\^7\)\/\(16\ 2\^\(2/3\)\) - \(6701\ q\^8\)\/\(144\ 2\^\(1/3\)\) + \
+\(227081\ q\^9\)\/2592 - \(5359\ q\^10\)\/\(16\ 2\^\(2/3\)\) + q\^11\ b\_11\)\
+\/2\^\(1/3\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(E\_2[
+        q_]\  := \ \ 1\ \  - \ \ 24\ \(\[Sum]\+\(m = \
+1\)\%\(N\_order\)\(\[Sum]\+\(n = 1\)\%\(N\_order\)m\ q\^\(3\ m\ n\)\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(W[
+        q_]\  := \ \ 1\/6\ \((\ \ E\_2[
+                q]\ \  + \ \ 2\ E\_2\ [\ 
+                  q\^2]\ )\)\ \ \  + \ \ \[IndentingNewLine]\t\t2 \
+\(\[Sum]\+\(k = 1\)\%\(N\_order\)k \((\ \ \((eX[q]\ q\^2)\)\^k\ \  + \ \ \
+\((emX[q]\ q)\)\^k\ \  + \ \ q\^\(3\ k\)\ \  + \ \ \((\ e2X[q]\ q\ )\)\^k\ \
+)\)\)\ \ \  + \[IndentingNewLine]\t\t2 \(\[Sum]\+\(n = 1\)\%\(\(N\_order\)\(\ \
+\)\)\(\[Sum]\+\(k = 1\)\%\(N\_order\)k\ \((\ \ \ \ \((\ eX[q]\ q\^\(3\ n\  + \
+\ 2\))\)\^k\ \  + \ \ \((emX[q]\ q\^\(3  n\  + \ 1\))\)\^\(\(k\)\(\ \)\)\ \  \
++ \[IndentingNewLine]\t\t\t\t\ \ \ q\^\(3\ \((2  n\  + \ 1)\)\ k\)\ \ \ \ \ \ \
+\ \ \ \ \ \ \ \  + \ \ \ \ q\^\(3\ \((2  n\  - \ 1)\)\ k\)\ \ \ \ \ \ \ \ \ \ \
+ + \ \[IndentingNewLine]\t\t\t\t\ \ \((\ e2X[q]\ q\^\(6\ n\  + \ 1\)\ )\)\^k\ \
+\  + \ \ \((\ em2X[q]\ q\^\(6\ n\  - \ 1\)\ )\)\^k\ )\)\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\( (*\ 
+      Series[W[q], \ {q, \ 0, \ N\_order}\ ]\ *) \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(SeriesCoefficient[Series[W[q], \ {q, 0, \ N\_order}], \ 
+      8]\)\(\ \ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(SeriesCoefficient[Series[W[q], \ {q, 0, \ N\_order}], \ 9]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[
+        Normal[Series[
+            W[q], \ {q, \ 0, \ 
+              N\_order}\ ]]]\  /. \ \(\(q\)\(\ \)\(\[Rule]\)\(\ \
+\)\(q\_tw\/\@2\%3\)\(\ \ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/2 + 3\ q\_tw + 6\ q\_tw\%2 + 6\ q\_tw\%3 + 8\ q\_tw\%4 + 
+      8\ q\_tw\%5 + 
+      3\ q\_tw\%6 + \(23\ q\_tw\%7\)\/3 + \(16\ q\_tw\%8\)\/3\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"4.1 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{799, 771},
+WindowMargins->{{136, Automatic}, {64, Automatic}},
+StyleDefinitions -> "Default.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1705, 50, 83, 1, 59, "Input"],
+
+Cell[CellGroupData[{
+Cell[1813, 55, 50, 1, 27, "Input"],
+Cell[1866, 58, 183, 3, 20, "Message"],
+Cell[2052, 63, 36, 1, 27, "Output"]
+}, Open  ]],
+Cell[2103, 67, 113, 2, 57, "Input"],
+
+Cell[CellGroupData[{
+Cell[2241, 73, 38, 1, 27, "Input"],
+Cell[2282, 76, 210, 3, 32, "Output"]
+}, Open  ]],
+Cell[2507, 82, 171, 3, 65, "Input"],
+Cell[2681, 87, 62, 1, 30, "Input"],
+
+Cell[CellGroupData[{
+Cell[2768, 92, 104, 2, 46, "Input"],
+Cell[2875, 96, 183, 3, 20, "Message"]
+}, Open  ]],
+Cell[3073, 102, 692, 11, 229, "Input"],
+Cell[3768, 115, 125, 2, 27, "Input"],
+Cell[3896, 119, 53, 1, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[3974, 124, 84, 1, 27, "Input"],
+Cell[4061, 127, 168, 3, 41, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4266, 135, 78, 1, 27, "Input"],
+Cell[4347, 138, 47, 1, 38, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4431, 144, 42, 1, 27, "Input"],
+Cell[4476, 147, 47, 1, 38, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4560, 153, 605, 12, 139, "Input"],
+Cell[5168, 167, 239, 6, 34, "Print"],
+Cell[5410, 175, 273, 7, 34, "Print"],
+Cell[5686, 184, 211, 5, 34, "Print"],
+Cell[5900, 191, 305, 8, 34, "Print"],
+Cell[6208, 201, 299, 8, 34, "Print"],
+Cell[6510, 211, 223, 5, 34, "Print"],
+Cell[6736, 218, 301, 8, 34, "Print"],
+Cell[7040, 228, 315, 8, 34, "Print"],
+Cell[7358, 238, 225, 5, 34, "Print"],
+Cell[7586, 245, 315, 8, 34, "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7938, 258, 97, 3, 27, "Input"],
+Cell[8038, 263, 353, 5, 48, "Output"]
+}, Open  ]],
+Cell[8406, 271, 167, 4, 57, "Input"],
+Cell[8576, 277, 906, 13, 212, "Input"],
+Cell[9485, 292, 119, 2, 43, "Input"],
+Cell[9607, 296, 114, 2, 27, "Input"],
+Cell[9724, 300, 91, 1, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[9840, 305, 193, 5, 50, "Input"],
+Cell[10036, 312, 177, 3, 41, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

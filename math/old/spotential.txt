@@ -1,0 +1,16 @@
+
+omega1  =  Pi I
+omega2  =  - Pi 5
+
+gg = WeierstrassInvariants[{omega1,omega2}]
+
+WF[x_] := WeierstrassP [ x, gg ]
+
+
+WW[x1_, x2_ ] :=  WF [ x1 + x2 ]   +    WF [ x1 - x2 ] 
+
+               +  (1/2) ( WF [ x1 ]  +  WF [ x2 ]
+                      +  WF [ x1 + Pi I ] - WF [ Pi I ]
+                      +  WF [ x2 + Pi I ] - WF [ Pi I ] )
+
+

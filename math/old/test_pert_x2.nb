@@ -1,0 +1,275 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      5784,        189]*)
+(*NotebookOutlinePosition[      6436,        212]*)
+(*  CellTagsIndexPosition[      6392,        208]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(k\  = \ 1;\)\(\n\)
+    \(a\  = \ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(2  \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ ;\)\(\n\)\(\n\)
+    \(b\  = \ 1\/2;\)\(\[IndentingNewLine]\)\(\n\)
+    \(c\  = \ \(-\ a\^2\)\ \ ;\)\(\[IndentingNewLine]\)\(\n\)
+    \( (*\ \(g\  = \ \(11\/12\) a;\)\ *) \)\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(d\  = \ 1\/a\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(2\^\(1/3\)\ \[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \
+\[Pi]\)\/3\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(e\  = \ \(-\ b\)\/a\^2\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(\[ExponentialE]\^\(\(2\ \[ImaginaryI]\ \
+\[Pi]\)\/3\)\/2\^\(1/3\)\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(f = \ \(b\^2 - \ c\ a\)\/a\^3\)], "Input"],
+
+Cell[BoxData[
+    \(3\/2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(h\  = \ \(\(-\ 
+              1\)\/a\) \((\ \(g\ a\^2\  + \ b\^3\  - \ 2\ b\ a\ \
+c\)\/a\^3)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-2\)\ 2\^\(1/3\)\ \[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \
+\[Pi]\)\/3\)\)\ \((5\/8 + \(\[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \[Pi]\)\
+\/3\)\)\ g\)\/2\^\(2/3\))\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(sys\  := \ {\ 
+        c\  + \ 4\ a\^2\  - \ h\  - \ 4\ \((\ 2\ d\ f\  + \ e\^2)\)\  - \ 
+            9\ \((\ 3\ d\^2\ e\ )\)\  - \ 16\ d\^4\[IndentingNewLine]\t + \ 
+            2\ \((\ 2\ a\ g\  + \ 2\ b\ c\ )\)\  + \ 
+            8\ \((\ 2\ a\^2\ \((\ 2\ a\ c\ \  + \ b\^2\ )\)\  + \ 
+                  4\ \((a\ b\ )\)\^2\ )\)\  + \[IndentingNewLine]\t
+            18\ \((\ 6\ \(a\^5\) b\ )\) + \ 32\ a\^8\  - \ d\ \  == \ 
+          0\ }\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(Solve[sys, \ g]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({{g \[Rule] \(11\ \((\(-1\))\)\^\(2/3\)\)\/\(12\ 2\^\(1/3\)\)}}\)], \
+"Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(g\  = \ \(11\ \((\(-1\))\)\^\(2/3\)\)\/\(12\ 2\^\(1/3\)\)\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(11\ \((\(-1\))\)\^\(2/3\)\)\/\(12\ 2\^\(1/3\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(h\  = \ 
+      Simplify[\ \(\(-\ 
+                1\)\/a\) \((\ \(g\ a\^2\  + \ b\^3\  - \ 2\ b\ a\ \
+c\)\/a\^3)\)\ ]\)], "Input"],
+
+Cell[BoxData[
+    \(\(13\ \((\(-1\))\)\^\(1/3\)\)\/\(3\ 2\^\(2/3\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(WW4\  = \ \ \(\(2\)\(\
+\ \)\((\ c\  + \ 2\ a\^2\  + \ h\  + \ 2\ \((2\ d\ f\  + \ e\^2)\)\ \  + \ 
+            9\ \(d\^2\) e\ \[IndentingNewLine]\t + \ 
+            4\ d\^4\ \[IndentingNewLine]\  + \ 2\ a\ g\  + \ 2\ b\ c\ \  + \ 
+            2\ \((\ 2\ a\^2\ \((2\ a\ c\  + \ b\^2)\)\  + \ 
+                  4\ \((a\ b)\)\^2\ )\)\  + \[IndentingNewLine]18\ a\^5\ b\ \ \
+ + \ 4\ a\^8\  + \ d\ )\)\(\ \)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(2\ \((\(13\ \((\(-1\))\)\^\(1/3\)\)\/\(3\ 2\^\(2/3\)\) + \(5\ \
+\[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \[Pi]\)\/3\)\)\)\/\(2\ 2\^\(2/3\)\) \
++ 2\^\(1/3\)\ \[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \[Pi]\)\/3\)\) + 
+          11\/6\ \((\(-\(1\/2\)\))\)\^\(2/3\)\ \[ExponentialE]\^\(\(2\ \
+\[ImaginaryI]\ \[Pi]\)\/3\) + 
+          2\ \((\[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \[Pi]\)\/3\)\)\/2\^\
+\(2/3\) + 
+                3\ 2\^\(1/3\)\ \[ExponentialE]\^\(-\(\(2\ \[ImaginaryI]\ \
+\[Pi]\)\/3\)\))\))\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[WW4]\)], "Input"],
+
+Cell[BoxData[
+    \(\(-16\)\ \((\(-2\))\)\^\(1/3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(WW3\  = \ 
+      2\ \((\ 2\  + \ b\  + \ f\ \  + \ 4\ d\ e\  + \ 
+            3\ d\^3\  + \[IndentingNewLine]\t\((2\ a\ c\  + \ b\^2\ )\)\  + \ 
+            8\ \(a\^3\) b\  + \ 3\ a\^6)\)\)], "Input"],
+
+Cell[BoxData[
+    \(16\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{819, 708},
+WindowMargins->{{150, Automatic}, {Automatic, 52}},
+Magnification->1.25
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 350, 6, 286, "Input"],
+
+Cell[CellGroupData[{
+Cell[2129, 61, 81, 2, 80, "Input"],
+Cell[2213, 65, 104, 2, 42, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2354, 72, 55, 1, 58, "Input"],
+Cell[2412, 75, 108, 2, 62, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2557, 82, 62, 1, 60, "Input"],
+Cell[2622, 85, 38, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2697, 91, 127, 3, 63, "Input"],
+Cell[2827, 96, 204, 3, 72, "Output"]
+}, Open  ]],
+Cell[3046, 102, 474, 8, 75, "Input"],
+
+Cell[CellGroupData[{
+Cell[3545, 114, 79, 1, 54, "Input"],
+Cell[3627, 117, 99, 2, 54, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3763, 124, 128, 3, 82, "Input"],
+Cell[3894, 129, 83, 1, 54, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4014, 135, 150, 4, 63, "Input"],
+Cell[4167, 141, 82, 1, 54, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4286, 147, 492, 7, 134, "Input"],
+Cell[4781, 156, 541, 9, 139, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5359, 170, 46, 1, 34, "Input"],
+Cell[5408, 173, 64, 1, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5509, 179, 220, 4, 55, "Input"],
+Cell[5732, 185, 36, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

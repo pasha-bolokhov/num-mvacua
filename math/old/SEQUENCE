@@ -1,0 +1,5 @@
+
+so5_properX.nb   --->  scaleX_vacua_x1.dat , scaleX_vacua_x2.dat , scaleX_vacua_der.dat
+        "glue_x1x2.pl" --> scaleX_vacua.math.dat
+        scaleX_calc.nb --> scaleX_spotential.dat
+

@@ -1,0 +1,601 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     13775,        432]*)
+(*NotebookOutlinePosition[     14427,        455]*)
+(*  CellTagsIndexPosition[     14383,        451]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(b\  = \ \(8\ \[Zeta]\  - \ 5\)\/3\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((\(-5\) + 8\ \[Zeta])\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(e\  = \ \(-\ b\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((5 - 8\ \[Zeta])\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(f\  = \ \(28\ \[Zeta]\^2\  - \ 8\ \[Zeta]\  - 11\)\/3\)], "Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((\(-11\) - 8\ \[Zeta] + 28\ \[Zeta]\^2)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(c\  = \ \(-\ \ 1\)\/9\ \((\ 
+          20\ \[Zeta]\^2\  + \ 56\ \[Zeta]\  - \ 58\ )\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/9\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(g\  = \ 
+      1\/81\ \((\ \(-2635\)\ \  + \ 2928\ \[Zeta]\  - \ 732\ \[Zeta]\^2\  + \ 
+            736\ \[Zeta]\^3)\)\)\(\[IndentingNewLine]\)
+    \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/81\ \((\(-2635\) + 2928\ \[Zeta] - 732\ \[Zeta]\^2 + 
+          736\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(h\  = \ \(-\ \((\ 
+          g\  + \ b\ f\  + \ c\ e\ )\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+            20\ \[Zeta]\^2)\) - 
+      1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+            28\ \[Zeta]\^2)\) + 
+      1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+            736\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[h]\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(2\/81\)\)\ \((\(-635\) + 132\ \[Zeta] - 762\ \[Zeta]\^2 + 
+          1616\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(W3 = \ \(-4\)\ \  + \[IndentingNewLine]1\/\[Zeta]\ \((\ 
+            5\ b\  + \ f\  - \ 8\ \[Zeta]\ b\  + \ 
+              16\ \[Zeta]\^2\  + \ \(1\/2\) \((\ 
+                  2  c\  + \ b\^2\  + \ 3)\)\ )\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-4\) + \(\(1\/\[Zeta]\)\((16\ \[Zeta]\^2 + 
+          5\/3\ \((\(-5\) + 8\ \[Zeta])\) - 
+          8\/3\ \[Zeta]\ \((\(-5\) + 8\ \[Zeta])\) + 
+          1\/3\ \((\(-11\) - 8\ \[Zeta] + 28\ \[Zeta]\^2)\) + 
+          1\/2\ \((3 + 1\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+                2\/9\ \((58 - 56\ \[Zeta] - 
+                      20\ \[Zeta]\^2)\))\))\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[W3]\)], "Input"],
+
+Cell[BoxData[
+    \(\(4\ \((\(-2\) + 7\ \[Zeta] + 4\ \[Zeta]\^2)\)\)\/\(3\ \[Zeta]\)\)], \
+"Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a3\  = \ 1\/\(2\ \[Zeta]\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(2\ \[Zeta]\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a6\  = \ a3\^2\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(4\ \[Zeta]\^2\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a9\  = \ a3\^3\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(8\ \[Zeta]\^3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(am3\  = \ 2\ \[Zeta]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(2\ \[Zeta]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(am6\  = \ \((2\ \[Zeta])\)\^2\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(4\ \[Zeta]\^2\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(W4\  = \ \ a6\ c\  + \ 2\ a3\  + \ a6\ h\  + \ 
+        2\ a3\ \((\ 2\ f\  + \ b\^2\ )\)\  - \ 9\ b\  + \ 
+        4\ am3\  + \[IndentingNewLine]\t\[Zeta]\ a9\ \((\ 
+            2\ g\  + \ 2\ b\ c\  + \ 4\ \((\ 2\ c\  + \ b\^2\ )\)\  + \ 
+              8\ b\^2\  + \ 18\ b\  + \ 4\ )\)\  + \ \ \ \ 1\)], "Input"],
+
+Cell[BoxData[
+    \(1 + 1\/\[Zeta] + 8\ \[Zeta] - 
+      3\ \((\(-5\) + 
+            8\ \[Zeta])\) + \(58 - 56\ \[Zeta] - 20\ \[Zeta]\^2\)\/\(36\ \
+\[Zeta]\^2\) + \(1\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 2\/3\ \((\(-11\) - 8\ \
+\[Zeta] + 28\ \[Zeta]\^2)\)\)\/\[Zeta] + \(\(1\/\(4\ \
+\[Zeta]\^2\)\)\((\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+                20\ \[Zeta]\^2)\) - 
+          1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                28\ \[Zeta]\^2)\) + 
+          1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+                736\ \[Zeta]\^3)\))\)\) + \(\(1\/\(8\ \[Zeta]\^2\)\)\((4 + 
+          6\ \((\(-5\) + 8\ \[Zeta])\) + 8\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+          2\/27\ \((\(-5\) + 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+                20\ \[Zeta]\^2)\) + 
+          2\/81\ \((\(-2635\) + 2928\ \[Zeta] - 732\ \[Zeta]\^2 + 
+                736\ \[Zeta]\^3)\) + 
+          4\ \((1\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+                2\/9\ \((58 - 56\ \[Zeta] - 
+                      20\ \[Zeta]\^2)\))\))\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[W4]\)], "Input"],
+
+Cell[BoxData[
+    \(\(8\ \((7 - 12\ \[Zeta] + 30\ \[Zeta]\^2 + 2\ \[Zeta]\^3)\)\)\/\(27\ \
+\[Zeta]\^2\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(%\  /. \ \[Zeta]\  \[Rule] \ 
+        1\)\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(8\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(8\ \((\ 
+            7\  - \ 12\ \[Zeta]\  + \ 30\ \[Zeta]\^2\  + \ 
+              2\ \[Zeta]\^3)\)\)\/\(27\ \[Zeta]\^3\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(8\ \((7 - 12\ \[Zeta] + 30\ \[Zeta]\^2 + 2\ \[Zeta]\^3)\)\)\/\(27\ \
+\[Zeta]\^3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(%\  /. \ \[Zeta]\  \[Rule] \ \(-2\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-5\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(p\  = \ \(-\(2\/3\)\)\ \((\(-281\) + 
+            372\ \[Zeta] - 116\ \[Zeta]\^2 - 16\ \[Zeta]\^3 + 
+            56\ \[Zeta]\^4)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(2\/3\)\)\ \((\(-281\) + 372\ \[Zeta] - 116\ \[Zeta]\^2 - 
+          16\ \[Zeta]\^3 + 56\ \[Zeta]\^4)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(r\  = \ \(-\ \ \((\ \ p\ \  + \ b\ h\ \  + \ g\ e\  + \ 
+            c\ f\ )\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(1\/27\)\)\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\ \((\(-11\) - 
+            8\ \[Zeta] + 28\ \[Zeta]\^2)\) - 
+      1\/243\ \((5 - 8\ \[Zeta])\)\ \((\(-2635\) + 2928\ \[Zeta] - 
+            732\ \[Zeta]\^2 + 736\ \[Zeta]\^3)\) + 
+      2\/3\ \((\(-281\) + 372\ \[Zeta] - 116\ \[Zeta]\^2 - 16\ \[Zeta]\^3 + 
+            56\ \[Zeta]\^4)\) - 
+      1\/3\ \((\(-5\) + 
+            8\ \[Zeta])\)\ \((\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 
+                  56\ \[Zeta] - 20\ \[Zeta]\^2)\) - 
+            1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                  28\ \[Zeta]\^2)\) + 
+            1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+                  736\ \[Zeta]\^3)\))\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[r]\)], "Input"],
+
+Cell[BoxData[
+    \(1\/243\ \((\(-20255\) + 11696\ \[Zeta] - 2604\ \[Zeta]\^2 - 
+          27808\ \[Zeta]\^3 + 45856\ \[Zeta]\^4)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(W5\  = \ 
+      a6\ g\  + \ 
+        2\ a3\ 2\ b + \[IndentingNewLine]\[IndentingNewLine]a6\ r\ \  + \ \ 2\
+\ a3\ \((\ 2  h\  - \ 2\ b\ f\ )\)\ \  + \ 
+        3\ \((\ 3\ f\  + \ e\^2\  + 2\ b\^2\ )\)\ \  + \ 
+        4\ am3\ \((\ \(-4\) b)\)\  + \ 
+        5\ am6\  + \[IndentingNewLine]\[IndentingNewLine]\[Zeta]\ a9\ \((\ 
+            2  p\  + \ 2\ b\ g\  + \ 
+              c\^2\ \  + \ \ 4\ \((\ 
+                  2\ g\  + \ 2\ b\ c\  + \ 
+                    2\ b\ \((2  c\  + \ 
+                          b\^2)\))\)\  + \[IndentingNewLine]\ \ \ \ 3\ \((\ 
+                  3\ \((2  c\  + \ b\^2)\)\  + \ 
+                    12\ b\^2)\)\ \  + \ \ 32\ b\ \  + \ 
+              5\ )\)\  + \[IndentingNewLine]\[IndentingNewLine]1\ \  + \ \((\ \
+\(-\ b\)\ )\)\ \  + \ \(\(\[Zeta]\)\(\ \)\(am3\)\(\ \)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1 + 1\/3\ \((5 - 8\ \[Zeta])\) + 
+      22\ \[Zeta]\^2 + \(2\ \((\(-5\) + 8\ \[Zeta])\)\)\/\(3\ \[Zeta]\) - 
+      32\/3\ \[Zeta]\ \((\(-5\) + 
+            8\ \[Zeta])\) + \(\(-2635\) + 2928\ \[Zeta] - 732\ \[Zeta]\^2 + \
+736\ \[Zeta]\^3\)\/\(324\ \[Zeta]\^2\) + 
+      3\ \((\(-11\) + 1\/9\ \((5 - 8\ \[Zeta])\)\^2 - 8\ \[Zeta] + 
+            28\ \[Zeta]\^2 + 
+            2\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2)\) + \(\(1\/\[Zeta]\)\((\(-\(2\
+\/9\)\)\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                28\ \[Zeta]\^2)\) + 
+          2\ \((\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+                      20\ \[Zeta]\^2)\) - 
+                1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                      28\ \[Zeta]\^2)\) + 
+                1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+                      736\ \[Zeta]\^3)\))\))\)\) + \(\(1\/\(4\ \[Zeta]\^2\)\)\
+\((\(-\(1\/27\)\)\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\ \((\(-11\) - 
+                8\ \[Zeta] + 28\ \[Zeta]\^2)\) - 
+          1\/243\ \((5 - 8\ \[Zeta])\)\ \((\(-2635\) + 2928\ \[Zeta] - 
+                732\ \[Zeta]\^2 + 736\ \[Zeta]\^3)\) + 
+          2\/3\ \((\(-281\) + 372\ \[Zeta] - 116\ \[Zeta]\^2 - 
+                16\ \[Zeta]\^3 + 56\ \[Zeta]\^4)\) - 
+          1\/3\ \((\(-5\) + 
+                8\ \[Zeta])\)\ \((\(-\(1\/27\)\)\ \((5 - 
+                      8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+                      20\ \[Zeta]\^2)\) - 
+                1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                      28\ \[Zeta]\^2)\) + 
+                1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+                      736\ \[Zeta]\^3)\))\))\)\) + \(\(1\/\(8\ \[Zeta]\^2\)\)\
+\((5 + 32\/3\ \((\(-5\) + 8\ \[Zeta])\) + 
+          1\/81\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\^2 + 
+          2\/243\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-2635\) + 2928\ \[Zeta] - 
+                732\ \[Zeta]\^2 + 736\ \[Zeta]\^3)\) - 
+          4\/3\ \((\(-281\) + 372\ \[Zeta] - 116\ \[Zeta]\^2 - 
+                16\ \[Zeta]\^3 + 56\ \[Zeta]\^4)\) + 
+          3\ \((4\/3\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+                3\ \((1\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+                      2\/9\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\))\))\) + 
+          4\ \((2\/27\ \((\(-5\) + 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+                      20\ \[Zeta]\^2)\) + 
+                2\/81\ \((\(-2635\) + 2928\ \[Zeta] - 732\ \[Zeta]\^2 + 
+                      736\ \[Zeta]\^3)\) + 
+                2\/3\ \((\(-5\) + 
+                      8\ \[Zeta])\)\ \((1\/9\ \((\(-5\) + 8\ \[Zeta])\)\^2 + 
+                      2\/9\ \((58 - 56\ \[Zeta] - 
+                            20\ \[Zeta]\^2)\))\))\))\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[W5]\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(\(16\ \((44 - 80\ \[Zeta] + 3\ \[Zeta]\^2 - 50\ \[Zeta]\^3 + 
+                2\ \[Zeta]\^4)\)\)\/\(81\ \[Zeta]\^2\)\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(44 - 80\ \[Zeta] + 3\ \[Zeta]\^2 - 50\ \[Zeta]\^3 + 
+      2\ \[Zeta]\^4\)], "Input"],
+
+Cell[BoxData[
+    \(44 - 80\ \[Zeta] + 3\ \[Zeta]\^2 - 50\ \[Zeta]\^3 + 
+      2\ \[Zeta]\^4\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\
+\(\[IndentingNewLine]\)\(%\ \  /. \ \[Zeta]\  \[Rule] \ \(-2\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(648\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{906, 835},
+WindowMargins->{{171, Automatic}, {37, Automatic}},
+Magnification->1.25
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 99, 2, 80, "Input"],
+Cell[1878, 57, 65, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[1980, 63, 49, 1, 34, "Input"],
+Cell[2032, 66, 60, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2129, 72, 86, 1, 60, "Input"],
+Cell[2218, 75, 83, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2338, 81, 118, 2, 58, "Input"],
+Cell[2459, 85, 79, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2575, 91, 214, 4, 102, "Input"],
+Cell[2792, 97, 119, 2, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2948, 104, 123, 2, 54, "Input"],
+Cell[3074, 108, 315, 6, 91, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3426, 119, 44, 1, 34, "Input"],
+Cell[3473, 122, 127, 2, 51, "Output"]
+}, Open  ]],
+Cell[3615, 127, 26, 0, 34, "Input"],
+
+Cell[CellGroupData[{
+Cell[3666, 131, 241, 4, 82, "Input"],
+Cell[3910, 137, 395, 7, 93, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4342, 149, 45, 1, 34, "Input"],
+Cell[4390, 152, 100, 2, 56, "Output"]
+}, Open  ]],
+Cell[4505, 157, 52, 1, 54, "Input"],
+Cell[4560, 160, 26, 0, 34, "Input"],
+
+Cell[CellGroupData[{
+Cell[4611, 164, 59, 1, 60, "Input"],
+Cell[4673, 167, 51, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4761, 173, 47, 1, 35, "Input"],
+Cell[4811, 176, 54, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4902, 182, 47, 1, 35, "Input"],
+Cell[4952, 185, 54, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5043, 191, 89, 2, 54, "Input"],
+Cell[5135, 195, 44, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5216, 201, 98, 2, 55, "Input"],
+Cell[5317, 205, 47, 1, 35, "Output"]
+}, Open  ]],
+Cell[5379, 209, 52, 1, 54, "Input"],
+
+Cell[CellGroupData[{
+Cell[5456, 214, 332, 5, 55, "Input"],
+Cell[5791, 221, 1089, 19, 231, "Output"]
+}, Open  ]],
+Cell[6895, 243, 26, 0, 34, "Input"],
+
+Cell[CellGroupData[{
+Cell[6946, 247, 45, 1, 34, "Input"],
+Cell[6994, 250, 117, 2, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7148, 257, 131, 3, 74, "Input"],
+Cell[7282, 262, 35, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7354, 268, 187, 3, 85, "Input"],
+Cell[7544, 273, 117, 2, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7698, 280, 68, 1, 34, "Input"],
+Cell[7769, 283, 40, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7846, 289, 194, 3, 80, "Input"],
+Cell[8043, 294, 141, 2, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8221, 301, 113, 2, 34, "Input"],
+Cell[8337, 305, 750, 13, 131, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9124, 323, 44, 1, 34, "Input"],
+Cell[9171, 326, 145, 2, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9353, 333, 871, 16, 194, "Input"],
+Cell[10227, 351, 2788, 47, 506, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[13052, 403, 45, 1, 34, "Input"],
+Cell[13100, 406, 159, 2, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[13296, 413, 105, 2, 35, "Input"],
+Cell[13404, 417, 106, 2, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[13547, 424, 172, 2, 114, "Input"],
+Cell[13722, 428, 37, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

@@ -1,0 +1,880 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     15398,        786]*)
+(*NotebookOutlinePosition[     16029,        808]*)
+(*  CellTagsIndexPosition[     15985,        804]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    RowBox[{"\n", 
+      RowBox[{
+        StyleBox["\[Omega]1",
+          FontSize->16], "=", "  ", \(\[Pi]\ \[ImaginaryI]\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[ImaginaryI]\ \[Pi]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\[Tau] = \ 6.5\ \[ImaginaryI]\)], "Input"],
+
+Cell[BoxData[
+    \(6.5`\ \[ImaginaryI]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[Omega]2 = \ \[Omega]1\ \[Tau]\)\(\n\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-20.420352248333657`\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(gg\  = \ 
+      WeierstrassInvariants\ [\ {\[Omega]1, \ \[Omega]2}\ ]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-20.420352248333657`\)}]\
+\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(WF[x_] := WeierstrassP[x, gg]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(WW[x1_, x2_] := WF[x1 + x2] + WF[x1 - x2]\), "\[IndentingNewLine]", 
+    \(\(+\((1/2)\)\)\ \((WF[x1] + WF[x2] + WF[x1 + Pi\ I] - WF[Pi\ I] + 
+          WF[x2 + Pi\ I] - WF[Pi\ I])\)\), "\[IndentingNewLine]", 
+    \(\)}], "Input"],
+
+Cell[BoxData[
+    \(1\/2\ \((\(-2\)\ WeierstrassP[\[ImaginaryI]\ \[Pi], 
+              WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-20.420352248333657`\)}]] + 
+          WeierstrassP[x1, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-20.420352248333657`\)}]] + 
+          WeierstrassP[\[ImaginaryI]\ \[Pi] + x1, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-20.420352248333657`\)}]] + 
+          WeierstrassP[x2, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-20.420352248333657`\)}]] + 
+          WeierstrassP[\[ImaginaryI]\ \[Pi] + x2, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-20.420352248333657`\)}]])\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(pref\  = \ 
+      StringJoin["\<scale\>"\ , \ 
+        ToString[Abs[\[Tau]]], "\<_vacua\>"]\)], "Input"],
+
+Cell[BoxData[
+    \("scale6.5_vacua"\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(inname\  = \ 
+      StringJoin[\ pref, \ "\<.math.dat\>"]\), "\[IndentingNewLine]", 
+    \(outname = \ 
+      StringJoin["\<scale\>", \ 
+        ToString[Abs[\[Tau]]], "\<_spotential.dat\>"]\)}], "Input"],
+
+Cell[BoxData[
+    \("scale6.5_vacua.math.dat"\)], "Output"],
+
+Cell[BoxData[
+    \("scale6.5_spotential.dat"\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(data\  = Import\ [\ inname, "\<Table\>"];\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(\(ntotal\  = \ \(Dimensions[data]\)[\([1]\)]\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(values\  = \ 
+        Table\ [\ {Null, \ Null}, \ {n, \ 1, \ ntotal}\ ];\)\)}], "Input"],
+
+Cell[BoxData[
+    \(193\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(data[\([1, 4]\)]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(6.283185307181071`\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(For\ [\ i\  = \ 1, \ 
+        i\  \[LessEqual] \ ntotal, \ \(i++\), \[IndentingNewLine]\ 
+        tmpval\  = \ \ WW[\ 
+              data[\([i, 1]\)]\  + \ 
+                I\ data[\([i, 
+                      2]\)], \[IndentingNewLine]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data[\([i, 3]\)]\  + \ 
+                I\ data[\([i, 4]\)]\ \ ]\  // 
+            N; \[IndentingNewLine]values[\([i, 1]\)]\  = \ 
+          Re[tmpval]; \[IndentingNewLine]values[\([i, 2]\)]\  = \ 
+          Im[tmpval];\[IndentingNewLine]];\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(ListPlot[values]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+-1.06587e+07 6.3952e+07 0.309017 8.5573e+07 [
+[.16797 .29652 -24 -9 ]
+[.16797 .29652 24 0 ]
+[.29588 .29652 -24 -9 ]
+[.29588 .29652 24 0 ]
+[.42378 .29652 -24 -9 ]
+[.42378 .29652 24 0 ]
+[.55168 .29652 -24 -9 ]
+[.55168 .29652 24 0 ]
+[.67959 .29652 -24 -9 ]
+[.67959 .29652 24 0 ]
+[.80749 .29652 -24 -9 ]
+[.80749 .29652 24 0 ]
+[.9354 .29652 -24 -9 ]
+[.9354 .29652 24 0 ]
+[.02757 .0523 -39 -6.25 ]
+[.02757 .0523 0 6.25 ]
+[.02757 .13787 -39 -6.25 ]
+[.02757 .13787 0 6.25 ]
+[.02757 .22344 -39 -6.25 ]
+[.02757 .22344 0 6.25 ]
+[.02757 .39459 -33 -6.25 ]
+[.02757 .39459 0 6.25 ]
+[.02757 .48016 -33 -6.25 ]
+[.02757 .48016 0 6.25 ]
+[.02757 .56574 -33 -6.25 ]
+[.02757 .56574 0 6.25 ]
+[ 0 0 0 0 ]
+[ 1 .61803 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 g
+.25 Mabswid
+[ ] 0 setdash
+.16797 .30902 m
+.16797 .31527 L
+s
+[(0.166667)] .16797 .29652 0 1 Mshowa
+.29588 .30902 m
+.29588 .31527 L
+s
+[(0.166667)] .29588 .29652 0 1 Mshowa
+.42378 .30902 m
+.42378 .31527 L
+s
+[(0.166667)] .42378 .29652 0 1 Mshowa
+.55168 .30902 m
+.55168 .31527 L
+s
+[(0.166667)] .55168 .29652 0 1 Mshowa
+.67959 .30902 m
+.67959 .31527 L
+s
+[(0.166667)] .67959 .29652 0 1 Mshowa
+.80749 .30902 m
+.80749 .31527 L
+s
+[(0.166667)] .80749 .29652 0 1 Mshowa
+.9354 .30902 m
+.9354 .31527 L
+s
+[(0.166667)] .9354 .29652 0 1 Mshowa
+.125 Mabswid
+.06565 .30902 m
+.06565 .31277 L
+s
+.09123 .30902 m
+.09123 .31277 L
+s
+.11681 .30902 m
+.11681 .31277 L
+s
+.14239 .30902 m
+.14239 .31277 L
+s
+.19355 .30902 m
+.19355 .31277 L
+s
+.21913 .30902 m
+.21913 .31277 L
+s
+.24471 .30902 m
+.24471 .31277 L
+s
+.27029 .30902 m
+.27029 .31277 L
+s
+.32146 .30902 m
+.32146 .31277 L
+s
+.34704 .30902 m
+.34704 .31277 L
+s
+.37262 .30902 m
+.37262 .31277 L
+s
+.3982 .30902 m
+.3982 .31277 L
+s
+.44936 .30902 m
+.44936 .31277 L
+s
+.47494 .30902 m
+.47494 .31277 L
+s
+.50052 .30902 m
+.50052 .31277 L
+s
+.5261 .30902 m
+.5261 .31277 L
+s
+.57726 .30902 m
+.57726 .31277 L
+s
+.60285 .30902 m
+.60285 .31277 L
+s
+.62843 .30902 m
+.62843 .31277 L
+s
+.65401 .30902 m
+.65401 .31277 L
+s
+.70517 .30902 m
+.70517 .31277 L
+s
+.73075 .30902 m
+.73075 .31277 L
+s
+.75633 .30902 m
+.75633 .31277 L
+s
+.78191 .30902 m
+.78191 .31277 L
+s
+.83307 .30902 m
+.83307 .31277 L
+s
+.85865 .30902 m
+.85865 .31277 L
+s
+.88423 .30902 m
+.88423 .31277 L
+s
+.90981 .30902 m
+.90981 .31277 L
+s
+.01449 .30902 m
+.01449 .31277 L
+s
+.96098 .30902 m
+.96098 .31277 L
+s
+.98656 .30902 m
+.98656 .31277 L
+s
+.25 Mabswid
+0 .30902 m
+1 .30902 L
+s
+.04007 .0523 m
+.04632 .0523 L
+s
+gsave
+.02757 .0523 -39 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(-3) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.04007 .13787 m
+.04632 .13787 L
+s
+gsave
+.02757 .13787 -39 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(-2) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.04007 .22344 m
+.04632 .22344 L
+s
+gsave
+.02757 .22344 -39 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(-1) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.04007 .39459 m
+.04632 .39459 L
+s
+gsave
+.02757 .39459 -33 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(1) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.04007 .48016 m
+.04632 .48016 L
+s
+gsave
+.02757 .48016 -33 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(2) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.04007 .56574 m
+.04632 .56574 L
+s
+gsave
+.02757 .56574 -33 -4.25 Mabsadd m
+1 1 Mabs scale
+/Courier findfont 10 scalefont setfont
+(3) show
+/Math1Mono findfont 10 scalefont setfont
+(\\264) show
+/Courier findfont 10 scalefont setfont
+(10) show
+0 5.25 rmoveto
+/Courier findfont 7.5 scalefont setfont
+(-9) show
+grestore
+.125 Mabswid
+.04007 .06941 m
+.04382 .06941 L
+s
+.04007 .08653 m
+.04382 .08653 L
+s
+.04007 .10364 m
+.04382 .10364 L
+s
+.04007 .12076 m
+.04382 .12076 L
+s
+.04007 .15499 m
+.04382 .15499 L
+s
+.04007 .1721 m
+.04382 .1721 L
+s
+.04007 .18921 m
+.04382 .18921 L
+s
+.04007 .20633 m
+.04382 .20633 L
+s
+.04007 .24056 m
+.04382 .24056 L
+s
+.04007 .25767 m
+.04382 .25767 L
+s
+.04007 .27479 m
+.04382 .27479 L
+s
+.04007 .2919 m
+.04382 .2919 L
+s
+.04007 .32613 m
+.04382 .32613 L
+s
+.04007 .34325 m
+.04382 .34325 L
+s
+.04007 .36036 m
+.04382 .36036 L
+s
+.04007 .37748 m
+.04382 .37748 L
+s
+.04007 .4117 m
+.04382 .4117 L
+s
+.04007 .42882 m
+.04382 .42882 L
+s
+.04007 .44593 m
+.04382 .44593 L
+s
+.04007 .46305 m
+.04382 .46305 L
+s
+.04007 .49728 m
+.04382 .49728 L
+s
+.04007 .51439 m
+.04382 .51439 L
+s
+.04007 .53151 m
+.04382 .53151 L
+s
+.04007 .54862 m
+.04382 .54862 L
+s
+.04007 .03518 m
+.04382 .03518 L
+s
+.04007 .01807 m
+.04382 .01807 L
+s
+.04007 .00095 m
+.04382 .00095 L
+s
+.04007 .58285 m
+.04382 .58285 L
+s
+.04007 .59997 m
+.04382 .59997 L
+s
+.04007 .61708 m
+.04382 .61708 L
+s
+.25 Mabswid
+.04007 0 m
+.04007 .61803 L
+s
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+.008 w
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.72222 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.97619 .30902 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.97619 .30902 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .60332 Mdot
+.59524 .01472 Mdot
+.59524 .01472 Mdot
+.59524 .60332 Mdot
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+  ImageSize->{288, 177.938},
+  ImageMargins->{{43, 0}, {0, 0}},
+  ImageRegion->{{0, 1}, {0, 1}},
+  ImageCacheValid->False],
+
+Cell[BoxData[
+    TagBox[\(\[SkeletonIndicator]  Graphics  \[SkeletonIndicator]\),
+      False,
+      Editable->False]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(Export[outname, 
+        values, \ "\<Table\>"\ ];\)\)\)], "Input"]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{681, 707},
+WindowMargins->{{189, Automatic}, {Automatic, 40}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 153, 4, 44, "Input"],
+Cell[1932, 59, 54, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2023, 65, 62, 1, 27, "Input"],
+Cell[2088, 68, 53, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2178, 74, 83, 2, 43, "Input"],
+Cell[2264, 78, 58, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2359, 84, 140, 4, 43, "Input"],
+Cell[2502, 90, 107, 2, 27, "Output"]
+}, Open  ]],
+Cell[2624, 95, 62, 1, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[2711, 100, 250, 4, 59, "Input"],
+Cell[2964, 106, 696, 15, 110, "Output"]
+}, Open  ]],
+Cell[3675, 124, 26, 0, 27, "Input"],
+Cell[3704, 126, 26, 0, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[3755, 130, 124, 3, 27, "Input"],
+Cell[3882, 135, 50, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3969, 141, 225, 5, 43, "Input"],
+Cell[4197, 148, 59, 1, 27, "Output"],
+Cell[4259, 151, 59, 1, 27, "Output"]
+}, Open  ]],
+Cell[4333, 155, 110, 2, 43, "Input"],
+
+Cell[CellGroupData[{
+Cell[4468, 161, 223, 4, 59, "Input"],
+Cell[4694, 167, 37, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4768, 173, 80, 1, 43, "Input"],
+Cell[4851, 176, 52, 1, 27, "Output"]
+}, Open  ]],
+Cell[4918, 180, 617, 12, 123, "Input"],
+
+Cell[CellGroupData[{
+Cell[5560, 196, 85, 2, 43, "Input"],
+Cell[5648, 200, 9455, 572, 186, 9332, 568, "GraphicsData", "PostScript", \
+"Graphics",
+  ImageCacheValid->False],
+Cell[15106, 774, 130, 3, 27, "Output"]
+}, Open  ]],
+Cell[15251, 780, 26, 0, 27, "Input"],
+Cell[15280, 782, 114, 2, 43, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

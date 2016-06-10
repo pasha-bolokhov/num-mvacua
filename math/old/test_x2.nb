@@ -1,0 +1,247 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      7289,        191]*)
+(*NotebookOutlinePosition[      7941,        214]*)
+(*  CellTagsIndexPosition[      7897,        210]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(k\  = \ 1;\)\n
+    a\  = \ \(\@\(1\/2\)\%3\) \[ExponentialE]\^\(\(\(2  \[Pi]\ \
+\[ImaginaryI]\)\/3\) k\)\ ; \n\n
+    b\  = \ 1\/2; \[IndentingNewLine]\n
+    c\  = \ \(-\ a\^2\)\ \ ; \[IndentingNewLine]\n
+    \(g\  = \ \(11\/12\) a;\)\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(val\  = \ {\ 0.5, \ 0.7, \ 1, 1.2, \ 1.5, \ 
+        2, 3, 4, 5}\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({0.5`, 0.7`, 1, 1.2`, 1.5`, 2, 3, 4, 5}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(For\ [\ i\  = \ 1, \ 
+      i \[LessEqual] \ \(Dimensions[
+            val]\)[\([\)\(1\)\(]\)], \ \(i++\), \n\[Tau]\  = \ 
+        val[\([i]\)]\ \[ImaginaryI]; \n
+      q\  = \ \[ExponentialE]\^\(2\ \[Pi]\ \[ImaginaryI]\ \[Tau]\); \n
+      EE\  = \ a\ \  + \ \ b\ q\^\(1\/3\)\ \ \ \  + \ \ c\ q\^\(2\/3\)\  (*\ \
+\(+\ g\)\ q\ \ *) ; \nX2\  = \ Log[EE]\ ; \n
+      x2\  = \ X2\  + \ \(\[Pi]\ \[ImaginaryI]\ \[Tau]\)\/3; \n
+      Print[\ "\<\[Tau] = \>", \ \[Tau], \ "\<   x2 = \>", \ 
+        N\ [\ x2, \ 20\ ]];\n]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = "\[InvisibleSpace]\(\(-0.7767782036025416`\) + 
+          1.8082335512316723`\ \[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.5], "   x2 = ", 
+        Complex[ -0.77677820360254157, 1.8082335512316723]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(0.7`\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = "\[InvisibleSpace]\(\(-1.002549589660034`\) + 
+          1.924651088784745`\ \[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 0.69999999999999996], "   x2 = ", 
+        Complex[ -1.002549589660034, 1.924651088784745]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\[ImaginaryI]\
+\[InvisibleSpace]"   x2 = \
+"\[InvisibleSpace]\(\(-1.30835705436530636931656056465233976468`19.\
+886678739751698\) + 
+          2.01433060342258202921233989452214843171`20.074083210341545\ \
+\[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1], "   x2 = ", 
+        Complex[ -1.30835705436530636931656056465233976468`19.886678739751698,
+           2.01433060342258202921233989452214843171`20.074083210341545]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.2`\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = "\[InvisibleSpace]\(\(-1.5096222887969637`\) + 
+          2.0445923673679522`\ \[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.2], "   x2 = ", 
+        Complex[ -1.5096222887969637, 2.0445923673679522]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(1.5`\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = "\[InvisibleSpace]\(\(-1.8144823584137457`\) + 
+          2.0692168221083906`\ \[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 1.5], "   x2 = ", 
+        Complex[ -1.8144823584137457, 2.0692168221083906]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(2\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = \
+"\[InvisibleSpace]\(\(-2.33010458936493453302172472326746473234`20.\
+02271060337701\) + 
+          2.08592430798196312806968274734343708246`19.9746337332326\ \
+\[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 2], "   x2 = ", 
+        Complex[ -2.33010458936493453302172472326746473234`20.02271060337701, 
+          2.08592430798196312806968274734343708246`19.9746337332326]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(3\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = \
+"\[InvisibleSpace]\(\(-3.37322818763434555704009226000317697826`20.\
+07977048487574\) + 
+          2.09337330060300490869454552297467433642`19.87257144488849\ \
+\[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 3], "   x2 = ", 
+        Complex[ -3.37322818763434555704009226000317697826`20.07977048487574, 
+          2.09337330060300490869454552297467433642`19.87257144488849]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(4\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = \
+"\[InvisibleSpace]\(\(-4.41991167338721933649390239563759749133`20.\
+106533618468273\) + 
+          2.09426959645177008817616667486767248168`19.78215261578863\ \
+\[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 4], "   x2 = ", 
+        Complex[ -4.41991167338721933649390239563759749133`20.106533618468273,
+           2.09426959645177008817616667486767248168`19.78215261578863]],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("\[Tau] = "\[InvisibleSpace]\(5\ \[ImaginaryI]\)\
+\[InvisibleSpace]"   x2 = \
+"\[InvisibleSpace]\(\(-5.46704573571647940514338956179114349935`20.\
+120778876873423\) + 
+          2.09437965190674791852715521928056487037`19.704081579593698\ \
+\[ImaginaryI]\)\),
+      SequenceForm[ "\[Tau] = ", 
+        Complex[ 0, 5], "   x2 = ", 
+        Complex[ -5.46704573571647940514338956179114349935`20.120778876873423,
+           2.09437965190674791852715521928056487037`19.704081579593698]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{819, 708},
+WindowMargins->{{150, Automatic}, {Automatic, 52}},
+Magnification->1.25
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 299, 6, 302, "Input"],
+
+Cell[CellGroupData[{
+Cell[2078, 61, 128, 2, 54, "Input"],
+Cell[2209, 65, 73, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2319, 71, 547, 10, 218, "Input"],
+Cell[2869, 83, 382, 7, 29, "Print"],
+Cell[3254, 92, 393, 7, 29, "Print"],
+Cell[3650, 101, 548, 11, 29, "Print"],
+Cell[4201, 114, 381, 7, 29, "Print"],
+Cell[4585, 123, 381, 7, 29, "Print"],
+Cell[4969, 132, 549, 11, 29, "Print"],
+Cell[5521, 145, 551, 11, 29, "Print"],
+Cell[6075, 158, 553, 11, 29, "Print"],
+Cell[6631, 171, 555, 11, 29, "Print"]
+}, Open  ]],
+Cell[7201, 185, 26, 0, 34, "Input"],
+Cell[7230, 187, 26, 0, 34, "Input"],
+Cell[7259, 189, 26, 0, 34, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

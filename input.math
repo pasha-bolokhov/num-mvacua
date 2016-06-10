@@ -1,0 +1,25 @@
+pi=Pi//N
+omega1 = Pi I
+tau= 1 + I
+omega2 = Pi I tau
+gg = WeierstrassInvariants[{omega1,omega2}]
+
+WP[x_] := WeierstrassPPrime [ x, gg]
+
+eq1[x_] := WP [ 3x]  -  WP [x] + WP [ 4x] - WP [2x] +  4 WP [2x]
+
+eq2[x_] := WP [ 3x]  + WP [ 5x] - 4 WP [4x]
+
+eq3[x_] := WP [ 4x]  +  WP [2x] + WP [ 5x] + WP [x] +  4 WP [6x] 
+
+
+FindRoot[eq1[x] == 0, {x, 0.5 omega1} ]
+
+FindRoot[eq2[x] == 0, {x, 0.5 omega1} ]
+
+FindRoot[eq3[x] == 0, {x, 0.5 omega1} ]
+
+FindRoot[ {  WP[ x1 + x2 ] + WP [ x1 - x2 ] + (1/2)WP[x1 ]  + (1/2) WP [x1 + Pi I] == 0,
+             WP[ x1 + x2 ] - WP [ x1 - x2 ] + (1/2)WP[x2 ]  + (1/2) WP [x2 + Pi I] == 0 },
+           { {x1,0.1}, { x2, 0.1 I } } ]
+

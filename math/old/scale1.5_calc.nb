@@ -1,0 +1,807 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     13907,        713]*)
+(*NotebookOutlinePosition[     14538,        735]*)
+(*  CellTagsIndexPosition[     14494,        731]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    RowBox[{"\n", 
+      RowBox[{
+        StyleBox["\[Omega]1",
+          FontSize->16], "=", "  ", \(\[Pi]\ \[ImaginaryI]\)}]}]], "Input"],
+
+Cell[BoxData[
+    \(\[ImaginaryI]\ \[Pi]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\[Tau] = \ 1.5\ \[ImaginaryI]\)], "Input"],
+
+Cell[BoxData[
+    \(1.5`\ \[ImaginaryI]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[Omega]2 = \ \[Omega]1\ \[Tau]\)\(\n\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-4.71238898038469`\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(gg\  = \ 
+      WeierstrassInvariants\ [\ {\[Omega]1, \ \[Omega]2}\ ]\)\(\
+\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-4.71238898038469`\)}]\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(WF[x_] := WeierstrassP[x, gg]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(WW[x1_, x2_] := WF[x1 + x2] + WF[x1 - x2]\), "\[IndentingNewLine]", 
+    \(\(+\((1/2)\)\)\ \((WF[x1] + WF[x2] + WF[x1 + Pi\ I] - WF[Pi\ I] + 
+          WF[x2 + Pi\ I] - WF[Pi\ I])\)\), "\[IndentingNewLine]", 
+    \(\)}], "Input"],
+
+Cell[BoxData[
+    \(1\/2\ \((\(-2\)\ WeierstrassP[\[ImaginaryI]\ \[Pi], 
+              WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \
+\(-4.71238898038469`\)}]] + 
+          WeierstrassP[x1, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-4.71238898038469`\
+\)}]] + WeierstrassP[\[ImaginaryI]\ \[Pi] + x1, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-4.71238898038469`\
+\)}]] + WeierstrassP[x2, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-4.71238898038469`\
+\)}]] + WeierstrassP[\[ImaginaryI]\ \[Pi] + x2, 
+            WeierstrassInvariants[{\[ImaginaryI]\ \[Pi], \(-4.71238898038469`\
+\)}]])\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(pref\  = \ 
+      StringJoin["\<scale\>"\ , \ 
+        ToString[Abs[\[Tau]]], "\<_vacua\>"]\)], "Input"],
+
+Cell[BoxData[
+    \("scale1.5_vacua"\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(inname\  = \ 
+      StringJoin[\ pref, \ "\<.math.dat\>"]\), "\[IndentingNewLine]", 
+    \(outname = \ 
+      StringJoin["\<scale\>", \ 
+        ToString[Abs[\[Tau]]], "\<_spotential.dat\>"]\)}], "Input"],
+
+Cell[BoxData[
+    \("scale1.5_vacua.math.dat"\)], "Output"],
+
+Cell[BoxData[
+    \("scale1.5_spotential.dat"\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(data\  = Import\ [\ inname, "\<Table\>"];\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(\(ntotal\  = \ \(Dimensions[data]\)[\([1]\)]\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(values\  = \ 
+        Table\ [\ {Null, \ Null}, \ {n, \ 1, \ ntotal}\ ];\)\)}], "Input"],
+
+Cell[BoxData[
+    \(196\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(data[\([1, 4]\)]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(2.069224043817569`\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(For\ [\ i\  = \ 1, \ 
+        i\  \[LessEqual] \ ntotal, \ \(i++\), \[IndentingNewLine]\ 
+        tmpval\  = \ \ WW[\ 
+              data[\([i, 1]\)]\  + \ 
+                I\ data[\([i, 
+                      2]\)], \[IndentingNewLine]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data[\([i, 3]\)]\  + \ 
+                I\ data[\([i, 4]\)]\ \ ]\  // 
+            N; \[IndentingNewLine]values[\([i, 1]\)]\  = \ 
+          Re[tmpval]; \[IndentingNewLine]values[\([i, 2]\)]\  = \ 
+          Im[tmpval];\[IndentingNewLine]];\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(ListPlot[values]\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.609985 1.27248 0.309017 3.50056 [
+[.10099 .29652 -12 -9 ]
+[.10099 .29652 12 0 ]
+[.22824 .29652 -12 -9 ]
+[.22824 .29652 12 0 ]
+[.35549 .29652 -12 -9 ]
+[.35549 .29652 12 0 ]
+[.48274 .29652 -12 -9 ]
+[.48274 .29652 12 0 ]
+[.73723 .29652 -9 -9 ]
+[.73723 .29652 9 0 ]
+[.86448 .29652 -9 -9 ]
+[.86448 .29652 9 0 ]
+[.99173 .29652 -9 -9 ]
+[.99173 .29652 9 0 ]
+[.59749 .04648 -36 -4.5 ]
+[.59749 .04648 0 4.5 ]
+[.59749 .13399 -30 -4.5 ]
+[.59749 .13399 0 4.5 ]
+[.59749 .2215 -36 -4.5 ]
+[.59749 .2215 0 4.5 ]
+[.59749 .39653 -30 -4.5 ]
+[.59749 .39653 0 4.5 ]
+[.59749 .48404 -24 -4.5 ]
+[.59749 .48404 0 4.5 ]
+[.59749 .57156 -30 -4.5 ]
+[.59749 .57156 0 4.5 ]
+[ 0 0 0 0 ]
+[ 1 .61803 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 g
+.25 Mabswid
+[ ] 0 setdash
+.10099 .30902 m
+.10099 .31527 L
+s
+[(-0.4)] .10099 .29652 0 1 Mshowa
+.22824 .30902 m
+.22824 .31527 L
+s
+[(-0.3)] .22824 .29652 0 1 Mshowa
+.35549 .30902 m
+.35549 .31527 L
+s
+[(-0.2)] .35549 .29652 0 1 Mshowa
+.48274 .30902 m
+.48274 .31527 L
+s
+[(-0.1)] .48274 .29652 0 1 Mshowa
+.73723 .30902 m
+.73723 .31527 L
+s
+[(0.1)] .73723 .29652 0 1 Mshowa
+.86448 .30902 m
+.86448 .31527 L
+s
+[(0.2)] .86448 .29652 0 1 Mshowa
+.99173 .30902 m
+.99173 .31527 L
+s
+[(0.3)] .99173 .29652 0 1 Mshowa
+.125 Mabswid
+.12644 .30902 m
+.12644 .31277 L
+s
+.15189 .30902 m
+.15189 .31277 L
+s
+.17734 .30902 m
+.17734 .31277 L
+s
+.20279 .30902 m
+.20279 .31277 L
+s
+.25369 .30902 m
+.25369 .31277 L
+s
+.27914 .30902 m
+.27914 .31277 L
+s
+.30459 .30902 m
+.30459 .31277 L
+s
+.33004 .30902 m
+.33004 .31277 L
+s
+.38094 .30902 m
+.38094 .31277 L
+s
+.40639 .30902 m
+.40639 .31277 L
+s
+.43184 .30902 m
+.43184 .31277 L
+s
+.45729 .30902 m
+.45729 .31277 L
+s
+.50819 .30902 m
+.50819 .31277 L
+s
+.53364 .30902 m
+.53364 .31277 L
+s
+.55909 .30902 m
+.55909 .31277 L
+s
+.58454 .30902 m
+.58454 .31277 L
+s
+.63543 .30902 m
+.63543 .31277 L
+s
+.66088 .30902 m
+.66088 .31277 L
+s
+.68633 .30902 m
+.68633 .31277 L
+s
+.71178 .30902 m
+.71178 .31277 L
+s
+.76268 .30902 m
+.76268 .31277 L
+s
+.78813 .30902 m
+.78813 .31277 L
+s
+.81358 .30902 m
+.81358 .31277 L
+s
+.83903 .30902 m
+.83903 .31277 L
+s
+.88993 .30902 m
+.88993 .31277 L
+s
+.91538 .30902 m
+.91538 .31277 L
+s
+.94083 .30902 m
+.94083 .31277 L
+s
+.96628 .30902 m
+.96628 .31277 L
+s
+.07554 .30902 m
+.07554 .31277 L
+s
+.05009 .30902 m
+.05009 .31277 L
+s
+.02464 .30902 m
+.02464 .31277 L
+s
+.25 Mabswid
+0 .30902 m
+1 .30902 L
+s
+.60999 .04648 m
+.61624 .04648 L
+s
+[(-0.075)] .59749 .04648 1 0 Mshowa
+.60999 .13399 m
+.61624 .13399 L
+s
+[(-0.05)] .59749 .13399 1 0 Mshowa
+.60999 .2215 m
+.61624 .2215 L
+s
+[(-0.025)] .59749 .2215 1 0 Mshowa
+.60999 .39653 m
+.61624 .39653 L
+s
+[(0.025)] .59749 .39653 1 0 Mshowa
+.60999 .48404 m
+.61624 .48404 L
+s
+[(0.05)] .59749 .48404 1 0 Mshowa
+.60999 .57156 m
+.61624 .57156 L
+s
+[(0.075)] .59749 .57156 1 0 Mshowa
+.125 Mabswid
+.60999 .06398 m
+.61374 .06398 L
+s
+.60999 .08148 m
+.61374 .08148 L
+s
+.60999 .09898 m
+.61374 .09898 L
+s
+.60999 .11649 m
+.61374 .11649 L
+s
+.60999 .15149 m
+.61374 .15149 L
+s
+.60999 .16899 m
+.61374 .16899 L
+s
+.60999 .1865 m
+.61374 .1865 L
+s
+.60999 .204 m
+.61374 .204 L
+s
+.60999 .23901 m
+.61374 .23901 L
+s
+.60999 .25651 m
+.61374 .25651 L
+s
+.60999 .27401 m
+.61374 .27401 L
+s
+.60999 .29151 m
+.61374 .29151 L
+s
+.60999 .32652 m
+.61374 .32652 L
+s
+.60999 .34402 m
+.61374 .34402 L
+s
+.60999 .36153 m
+.61374 .36153 L
+s
+.60999 .37903 m
+.61374 .37903 L
+s
+.60999 .41403 m
+.61374 .41403 L
+s
+.60999 .43154 m
+.61374 .43154 L
+s
+.60999 .44904 m
+.61374 .44904 L
+s
+.60999 .46654 m
+.61374 .46654 L
+s
+.60999 .50155 m
+.61374 .50155 L
+s
+.60999 .51905 m
+.61374 .51905 L
+s
+.60999 .53655 m
+.61374 .53655 L
+s
+.60999 .55406 m
+.61374 .55406 L
+s
+.60999 .02897 m
+.61374 .02897 L
+s
+.60999 .01147 m
+.61374 .01147 L
+s
+.60999 .58906 m
+.61374 .58906 L
+s
+.60999 .60656 m
+.61374 .60656 L
+s
+.25 Mabswid
+.60999 0 m
+.60999 .61803 L
+s
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+.008 w
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.97619 .30902 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.50301 .27272 Mdot
+.185 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.97619 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.50301 .27272 Mdot
+.82248 .30902 Mdot
+.97619 .30902 Mdot
+.82248 .30902 Mdot
+.97619 .30902 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.50301 .34531 Mdot
+.50301 .27272 Mdot
+.82248 .30902 Mdot
+.50301 .34531 Mdot
+.50301 .34531 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.97619 .30902 Mdot
+.97619 .30902 Mdot
+.50301 .34531 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.82248 .30902 Mdot
+.50301 .34531 Mdot
+.97619 .30902 Mdot
+.50301 .27272 Mdot
+.97619 .30902 Mdot
+.50301 .27272 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.50301 .27272 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.50301 .27272 Mdot
+.74562 .60332 Mdot
+.185 .30902 Mdot
+.50301 .27272 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.97619 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.74562 .01472 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.50301 .27272 Mdot
+.74562 .60332 Mdot
+.50301 .27272 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.82248 .30902 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.50301 .27272 Mdot
+.97619 .30902 Mdot
+.82248 .30902 Mdot
+.50301 .34531 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.50301 .27272 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .60332 Mdot
+.50301 .34531 Mdot
+.185 .30902 Mdot
+.50301 .27272 Mdot
+.50301 .34531 Mdot
+.50301 .34531 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.50301 .27272 Mdot
+.50301 .27272 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.50301 .34531 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.50301 .34531 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.97619 .30902 Mdot
+.82248 .30902 Mdot
+.74562 .01472 Mdot
+.74562 .01472 Mdot
+.74562 .60332 Mdot
+.50301 .27272 Mdot
+.74562 .60332 Mdot
+.97619 .30902 Mdot
+.50301 .34531 Mdot
+.74562 .60332 Mdot
+.74562 .60332 Mdot
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+  ImageSize->{288, 177.938},
+  ImageMargins->{{43, 0}, {0, 0}},
+  ImageRegion->{{0, 1}, {0, 1}},
+  ImageCacheValid->False],
+
+Cell[BoxData[
+    TagBox[\(\[SkeletonIndicator]  Graphics  \[SkeletonIndicator]\),
+      False,
+      Editable->False]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(Export[outname, 
+        values, \ "\<Table\>"\ ];\)\)\)], "Input"]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{681, 707},
+WindowMargins->{{217, Automatic}, {Automatic, 96}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 153, 4, 44, "Input"],
+Cell[1932, 59, 54, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2023, 65, 62, 1, 27, "Input"],
+Cell[2088, 68, 53, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2178, 74, 83, 2, 43, "Input"],
+Cell[2264, 78, 56, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2357, 84, 140, 4, 43, "Input"],
+Cell[2500, 90, 105, 2, 27, "Output"]
+}, Open  ]],
+Cell[2620, 95, 62, 1, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[2707, 100, 250, 4, 59, "Input"],
+Cell[2960, 106, 653, 12, 110, "Output"]
+}, Open  ]],
+Cell[3628, 121, 26, 0, 27, "Input"],
+Cell[3657, 123, 26, 0, 27, "Input"],
+
+Cell[CellGroupData[{
+Cell[3708, 127, 124, 3, 27, "Input"],
+Cell[3835, 132, 50, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3922, 138, 225, 5, 43, "Input"],
+Cell[4150, 145, 59, 1, 27, "Output"],
+Cell[4212, 148, 59, 1, 27, "Output"]
+}, Open  ]],
+Cell[4286, 152, 110, 2, 43, "Input"],
+
+Cell[CellGroupData[{
+Cell[4421, 158, 223, 4, 59, "Input"],
+Cell[4647, 164, 37, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4721, 170, 80, 1, 43, "Input"],
+Cell[4804, 173, 52, 1, 27, "Output"]
+}, Open  ]],
+Cell[4871, 177, 617, 12, 123, "Input"],
+
+Cell[CellGroupData[{
+Cell[5513, 193, 85, 2, 43, "Input"],
+Cell[5601, 197, 8011, 502, 186, 7888, 498, "GraphicsData", "PostScript", \
+"Graphics",
+  ImageCacheValid->False],
+Cell[13615, 701, 130, 3, 27, "Output"]
+}, Open  ]],
+Cell[13760, 707, 26, 0, 27, "Input"],
+Cell[13789, 709, 114, 2, 43, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

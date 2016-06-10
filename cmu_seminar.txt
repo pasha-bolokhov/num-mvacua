@@ -1,0 +1,15 @@
+
+
+         MASSIVE VACUA IN N=1* SUPERSYMMETRIC YANG-MILLS
+
+   N=1* SYM theories are conjectured to inherit the electromagnetic
+duality of N=4 Supersymmetric Yang-Mills. This duality is non-trivially
+realized on the structure of massive vacua of the N=1* theory, owing
+to the modular properties of the theory. These symmetry properties are
+sometimes alone enough to establish the exact superpotential of the 
+theory. We review the connection of N=1* with integrable systems, where
+in certain limits the exact solution is known. For the gauge group SU(N), 
+we review the approach of compactified theory on R^3 x S^1 where the exacts 
+results can be obtained more explicitly. Investigation of the case of 
+non-simply-laced gauge groups, with more diverse vacuum structure, is work
+in progress.

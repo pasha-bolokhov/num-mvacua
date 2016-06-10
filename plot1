@@ -1,0 +1,42 @@
+#
+ gnuplot << EOF > so5.single1.ps
+   set terminal postscript color
+   plot "so5.single" using 1:2
+EOF
+
+ gnuplot << EOF > so5.single2.ps
+   set terminal postscript color
+   plot "so5.single" using 3:4
+EOF
+
+
+ gnuplot << EOF > so5.single12.ps
+   set terminal postscript color
+   plot "so5.single" using 1:2, "so5.single" using 3:4
+EOF
+
+ gnuplot << EOF > so5.ordered1.ps
+   set terminal postscript color
+   plot "so5.output.ordered" using 2:3 title "x1"
+EOF
+
+ gnuplot << EOF > so5.ordered2.ps
+   set terminal postscript color
+   plot "so5.output.ordered" using 4:5 title "x2"
+EOF
+
+ gnuplot << EOF > so5.ordered12.ps
+   set terminal postscript color
+   plot "so5.output.ordered" using 2:3 title "x1", "so5.output.ordered" using 4:5 title "x2"
+EOF
+
+ gnuplot << EOF > so5.ordered11.ps
+   set terminal postscript color
+   plot "so5.output.ordered" using 1:2 title "re(x1) vs tau"
+EOF
+
+
+ gnuplot << EOF > so5.ordered22.ps
+   set terminal postscript color
+   plot "so5.output.ordered" using 1:4 title "re(x2) vs tau"
+EOF

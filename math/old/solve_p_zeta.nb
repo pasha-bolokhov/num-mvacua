@@ -1,0 +1,357 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      6762,        239]*)
+(*NotebookOutlinePosition[      7715,        269]*)
+(*  CellTagsIndexPosition[      7671,        265]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(b\  = \ \(8\ \[Zeta]\  - \ 5\)\/3\)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((\(-5\) + 8\ \[Zeta])\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(e\  = \ \(-\ b\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((5 - 8\ \[Zeta])\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(f\  = \ \(28\ \[Zeta]\^2\  - \ 8\ \[Zeta]\  - 11\)\/3\)], "Input"],
+
+Cell[BoxData[
+    \(1\/3\ \((\(-11\) - 8\ \[Zeta] + 28\ \[Zeta]\^2)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(c\  = \ \(-\ \ 1\)\/9\ \((\ 
+          20\ \[Zeta]\^2\  + \ 56\ \[Zeta]\  - \ 58\ )\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/9\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(g\  = \ 
+      1\/81\ \((\ \(-2635\)\ \  + \ 2928\ \[Zeta]\  - \ 732\ \[Zeta]\^2\  + \ 
+            736\ \[Zeta]\^3)\)\)\(\[IndentingNewLine]\)
+    \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/81\ \((\(-2635\) + 2928\ \[Zeta] - 732\ \[Zeta]\^2 + 
+          736\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(h\  = \ \(-\ \((\ 
+          g\  + \ b\ f\  + \ c\ e\ )\)\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 56\ \[Zeta] - 
+            20\ \[Zeta]\^2)\) - 
+      1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+            28\ \[Zeta]\^2)\) + 
+      1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+            736\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Simplify[h]\)], "Input"],
+
+Cell[BoxData[
+    \(\(-\(2\/81\)\)\ \((\(-635\) + 132\ \[Zeta] - 762\ \[Zeta]\^2 + 
+          1616\ \[Zeta]\^3)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(a3\  = \ 
+      1/\((2  \[Zeta])\)\)\(\[IndentingNewLine]\)
+    \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(2\ \[Zeta]\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a6\  = \ 1/\((2  \[Zeta])\)\^2\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(4\ \[Zeta]\^2\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a9\  = \ 1/\((2  \[Zeta])\)\^3\)], "Input"],
+
+Cell[BoxData[
+    \(1\/\(8\ \[Zeta]\^3\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(am3\  = \ 2  \[Zeta]\)], "Input"],
+
+Cell[BoxData[
+    \(2\ \[Zeta]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(am6\ \  = \ \ \((2  \[Zeta])\)\^2\)], "Input"],
+
+Cell[BoxData[
+    \(4\ \[Zeta]\^2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(r\  = \ \(-\ \ \((\ \ p\ \  + \ b\ h\ \  + \ g\ e\  + \ 
+            c\ f\ )\)\)\)\(\[IndentingNewLine]\)
+    \)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-p\) - 
+      1\/27\ \((58 - 56\ \[Zeta] - 20\ \[Zeta]\^2)\)\ \((\(-11\) - 
+            8\ \[Zeta] + 28\ \[Zeta]\^2)\) - 
+      1\/243\ \((5 - 8\ \[Zeta])\)\ \((\(-2635\) + 2928\ \[Zeta] - 
+            732\ \[Zeta]\^2 + 736\ \[Zeta]\^3)\) - 
+      1\/3\ \((\(-5\) + 
+            8\ \[Zeta])\)\ \((\(-\(1\/27\)\)\ \((5 - 8\ \[Zeta])\)\ \((58 - 
+                  56\ \[Zeta] - 20\ \[Zeta]\^2)\) - 
+            1\/9\ \((\(-5\) + 8\ \[Zeta])\)\ \((\(-11\) - 8\ \[Zeta] + 
+                  28\ \[Zeta]\^2)\) + 
+            1\/81\ \((2635 - 2928\ \[Zeta] + 732\ \[Zeta]\^2 - 
+                  736\ \[Zeta]\^3)\))\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(eqn1\  := \ 
+      a6\ g\ \  + \ 
+          4\ a3\ 2\ b\  - \ \[IndentingNewLine]\((\ 
+            a6\ r\ \ \ \  + \ 4\ a3\ \((2\ h\  - \ 2\ b\ f\ )\)\ \ \  + \ 
+              9\ \((\ 3\ f\  + \ e\^2\  + \ 
+                    2\ b\^2\ )\)\  + \[IndentingNewLine]\ \ \ \ \ \ \ \ \ \ \ \
+\ 16\ am3\ \((\ \(-\ 4\)\ b\ )\)\ \  + \ 
+              25\ am6\ )\)\  + \ \[IndentingNewLine]\((2  \[Zeta])\)\ a9\ \((\
+\((\ 2\ p\  + \ 2\ b\ g\  + \ c\^2)\)\ \  + \ 
+                4\ 2\ \((\ 
+                    2\ g\  + \ 2\ b\ c\  + \ 
+                      2\ b\ \((2  c\  + \ 
+                            b\^2)\))\)\  + \[IndentingNewLine]9\ \((3\ \((2  
+                              c\  + \ b\^2)\)\  + \ 12\ b\^2\ )\)\ \  + \ 
+                16\ 8\ b\ \  + \ 
+                25\ )\)\ \  + \[IndentingNewLine]1\ \  - \ \((\ \(-b\))\)\ \  \
+- \ \((2  \[Zeta])\)\ am3\ \  \[Equal] \ 0\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Solve[eqn1, \ p]\)], "Input"],
+
+Cell[BoxData[
+    \({{p \[Rule] \(-\(2\/3\)\)\ \((\(-281\) + 372\ \[Zeta] - 
+                116\ \[Zeta]\^2 - 16\ \[Zeta]\^3 + 
+                56\ \[Zeta]\^4)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(-\(2\/3\)\)\ \((\(-281\) + 372\  - 116\  - 
+          16\  + 56\ )\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(-10\)\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{718, 802},
+WindowMargins->{{150, Automatic}, {Automatic, 52}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperSize"->{612, 792},
+"PaperOrientation"->"Portrait",
+"PostScriptOutputFile":>FrontEnd`FileName[{$RootDirectory, "hepuser", \
+"bolokhov", "mvacua", "math"}, "solve_p_zeta.nb.ps", CharacterEncoding -> \
+"iso8859-1"],
+"Magnification"->1},
+Magnification->1.25
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 99, 2, 80, "Input"],
+Cell[1878, 57, 65, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[1980, 63, 49, 1, 34, "Input"],
+Cell[2032, 66, 60, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2129, 72, 86, 1, 60, "Input"],
+Cell[2218, 75, 83, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2338, 81, 118, 2, 58, "Input"],
+Cell[2459, 85, 79, 1, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2575, 91, 214, 4, 102, "Input"],
+Cell[2792, 97, 119, 2, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2948, 104, 123, 2, 54, "Input"],
+Cell[3074, 108, 315, 6, 91, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3426, 119, 44, 1, 34, "Input"],
+Cell[3473, 122, 127, 2, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3637, 129, 130, 3, 74, "Input"],
+Cell[3770, 134, 51, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3858, 140, 63, 1, 35, "Input"],
+Cell[3924, 143, 54, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4015, 149, 63, 1, 35, "Input"],
+Cell[4081, 152, 54, 1, 53, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4172, 158, 53, 1, 34, "Input"],
+Cell[4228, 161, 44, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4309, 167, 66, 1, 35, "Input"],
+Cell[4378, 170, 47, 1, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4462, 176, 149, 3, 54, "Input"],
+Cell[4614, 181, 647, 12, 171, "Output"]
+}, Open  ]],
+Cell[5276, 196, 945, 17, 174, "Input"],
+Cell[6224, 215, 52, 1, 54, "Input"],
+
+Cell[CellGroupData[{
+Cell[6301, 220, 49, 1, 34, "Input"],
+Cell[6353, 223, 178, 3, 51, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6568, 231, 134, 2, 80, "Input"],
+Cell[6705, 235, 41, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
